@@ -43,7 +43,7 @@ input[readonly] {
 		<form class="mt-3">
 			<h4 class="my-2" > Personal Information : </h4>
 	  <div class="form-row">
-	  	<div class="form-group col-md-3">
+	  	<div class="form-group col-md-2">
 	  		<label for="title" class="col-form-label">Titles</label>
 	  		  <select class="custom-select d-block my-0" required>
 			    <option value="1">Mr.</option>
@@ -59,20 +59,20 @@ input[readonly] {
 	      <label for="inputPassword4" class="col-form-label">Middle Name</label>
 	      <input type="password" class="form-control" id="inputPassword4" placeholder="Middle Name">
 	    </div>
-	    <div class="form-group col-md-3">
+	    <div class="form-group col-md-4">
 	      <label for="inputPassword4" class="col-form-label">Last Name</label>
 	      <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
 	    </div>
 	  </div>
 	  <div class="form-row">
-	  	<div class="form-group col-md-3">
+	  	<div class="form-group col-md-2">
 	  	<label for="gender" class="col-form-label">Gender</label>
 	  		<select class="custom-select d-block my-0" required>
 			    <option value="1">Male</option>
 			    <option value="2">Female</option>  
 			</select>
 		</div>
-		<div class="form-group col-md-3">
+		<div class="form-group col-md-2">
 	  	<label for="MaritialStatus" class="col-form-label">Maritial Status</label>
 	  		<select class="custom-select d-block my-0" required>
 			    <option value="1">Single</option>
@@ -91,32 +91,31 @@ input[readonly] {
 			</div>
 			<div class="well"> 
 			</div>
-		</div>		
+		</div>	
+		<div class="form-group col-md-4">
+	  		<label for="AadharNo" class="col-form-label">Aadhar Card Number</label>
+	      	<input type="text" class="form-control" id="AadharNo">
+	  	</div>	
+	  </div>
+	  <div class="form-row">
+	  		<label for="Address" class="col-form-label">Address</label>
+	       <input type="text" class="form-control" id="State" placeholder="Address">
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-5">
-	      <label for="inputState" class="col-form-label">State</label>
-	      <select id="inputState" class="form-control">Choose</select>
+	      <label for="State" class="col-form-label">State</label>
+	       <input type="text" class="form-control" id="State" placeholder="State">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputCity" class="col-form-label">City</label>
-	      <select id="inputCity" class="form-control">Choose</select>
+	      <label for="City" class="col-form-label">City</label>
+	       <input type="City" class="form-control" id="Percentage" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
 	      <label for="inputZip" class="col-form-label">Zip</label>
 	      <input type="text" class="form-control" id="inputZip">
 	    </div>
 	  </div>
-	  <div class="form-row">
-	  	<div class="form-group col-md-5">
-	  		<label for="Nationality" class="col-form-label">Nationality</label>
-	      <select id="Nationality" class="form-control">Choose</select>
-	  	</div>
-	  	<div class="form-group col-md-5 ml-auto">
-	  		<label for="AadharNo" class="col-form-label">Aadhar Card Number</label>
-	      	<input type="text" class="form-control" id="AadharNo">
-	  	</div>
-	  </div>
+
 
 	  	<h4 class="mt-3">Contact Details :</h4>
 	  	
@@ -142,21 +141,27 @@ input[readonly] {
 	  	<div class="form-row">
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">Highest Qualification</label>
-		      <select id="Qualification" class="form-control">Choose</select>
+		      <select id="Qualification" class="form-control">
+		      	<option value="1">Less than 10th</option>
+			    <option value="2">10th</option>
+			    <option value="2">12th</option>
+			    <option value="2">Graduation</option>
+			    <option value="2">Post Graduation</option>   
+			  </select>
 		    </div>
 		    <div class="form-group col-md-5 ml-auto">
 		      <label for="Course" class="col-form-label">Course</label>
-		      <select id="CourseCourse" class="form-control">Choose</select>
+		       <input type="text" class="form-control" id="Course" placeholder="Course">
 		    </div>
 	 	 </div>
 	 	 <div class="form-row">
 		    <div class="form-group col-md-5">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		      <select id="PassingYear" class="form-control">Choose</select>
+		       <input type="text" class="form-control" id="PassingYear" placeholder="Passing Year">
 		    </div>
 		    <div class="form-group col-md-5 ml-auto">
 		      <label for="Percentage" class="col-form-label">Percentage/CGPA</label>
-		      <input type="text" class="form-control" id="Percentage" placeholder="72">
+		      <input type="text" class="form-control" id="Percentage" placeholder="Percentage or CGPA">
 		    </div>
 	 	 </div>
 
