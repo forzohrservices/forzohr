@@ -38,17 +38,17 @@ input[readonly] {
 	
 
 	<div class="container">
-		<h4 class="display-4 mt-5">Job Seeker's Registration Form</h4>
+		<h4 class="display-4 mt-5">JOB SEEKER'S REGISTRATION FORM</h4>
 	<hr>
 		<form class="mt-3">
 			<h4 class="my-2" > Personal Information : </h4>
 	  <div class="form-row">
 	  	<div class="form-group col-md-2">
-	  		<label for="title" class="col-form-label">Titles</label>
+	  		<label for="title" class="col-form-label">Title</label>
 	  		  <select class="custom-select d-block my-0" required>
 			    <option value="1">Mr.</option>
-			    <option value="2">Mrs.</option>
-			    <option value="3">Miss.</option>
+			    <option value="2">Ms.</option>
+			    <option value="3">Mrs.</option>
 			  </select>
 	  	</div>
 	    <div class="form-group col-md-3">
@@ -56,12 +56,12 @@ input[readonly] {
 	      <input type="text" class="form-control" id="firstName" placeholder="First Name">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputPassword4" class="col-form-label">Middle Name</label>
-	      <input type="password" class="form-control" id="inputPassword4" placeholder="Middle Name">
+	      <label for="MiddleName" class="col-form-label">Middle Name</label>
+	      <input type="text" class="form-control" id="inputPassword4" placeholder="Middle Name">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputPassword4" class="col-form-label">Last Name</label>
-	      <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
+	      <label for="LastName" class="col-form-label">Last Name</label>
+	      <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
 	    </div>
 	  </div>
 	  <div class="form-row">
@@ -97,6 +97,25 @@ input[readonly] {
 	      	<input type="text" class="form-control" id="AadharNo">
 	  	</div>	
 	  </div>
+
+	  <div class="form-row">
+	  		<div class="form-group col-md-5">
+		    <label for="MobileNo" class="col-form-label">Mobile Number</label>
+		    <input type="text" class="form-control" id="MobileNo" placeholder="Ex - 9876543210" maxlength="10">
+		  </div>
+		  <div class="form-group col-md-5 ml-auto">
+		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		  </div>
+	  	</div>
+
+	  	<div class="form-row">
+	  		<div class="form-group col-md-6">
+		    <label for="email">Email address</label>
+		    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+		  </div>
+	  	</div>
+
 	  <div class="form-row">
 	  		<label for="Address" class="col-form-label">Address</label>
 	       <input type="text" class="form-control" id="State" placeholder="Address">
@@ -108,81 +127,168 @@ input[readonly] {
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="City" class="col-form-label">City</label>
-	       <input type="City" class="form-control" id="Percentage" placeholder="City">
+	       <input type="City" class="form-control" id="City" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
 	      <label for="inputZip" class="col-form-label">Zip</label>
 	      <input type="text" class="form-control" id="inputZip">
 	    </div>
 	  </div>
-	  	<div class="form-row">
-	  		<div class="form-group col-md-6">
-		    <label for="email">Email address</label>
-		    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-		  </div>
-	  	</div>
-	  	<div class="form-row">
-	  		<div class="form-group col-md-5">
-		    <label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="020 5784XXXX">
-		  </div>
-		  <div class="form-group col-md-5 ml-auto">
-		    <label for="MobileNo" class="col-form-label">Mobile Number</label>
-		    <input type="text" class="form-control" id="MobileNo" placeholder="98XXX78XXX">
-		  </div>
-	  	</div>
+	  	
+
 
 	  <h4 class="mt-3">Educational Details :</h4>
 
 	  	<div class="form-row">
 		    <div class="form-group col-md-5">
-		      <label for="Qualification" class="col-form-label">Highest Qualification</label>
+		      <label for="Qualification" class="col-form-label">1. Qualification</label>
 		      <select id="Qualification" class="form-control">
 		      	<option value="1">Less than 10th</option>
-			    <option value="2">10th</option>
-			    <option value="2">12th</option>
-			    <option value="2">Graduation</option>
-			    <option value="2">Post Graduation</option>   
+			    <option value="10th">10th</option>
+			    <option value="12th">12th</option>
+			    <option value="Diploma">Diploma</option>
+			    <option value="Graduation">Graduation</option>
+			    <option value="Post Graduation">Post Graduation</option>   
 			  </select>
 		    </div>
 		    <div class="form-group col-md-5 ml-auto">
-		      <label for="Course" class="col-form-label">Course</label>
-		       <input type="text" class="form-control" id="Course" placeholder="Course">
+		      <label for="Course" class="col-form-label">College/Institute</label>
+		       <input type="text" class="form-control" id="Course" placeholder="College or Institute Name">
 		    </div>
 	 	 </div>
 	 	 <div class="form-row">
 		    <div class="form-group col-md-4">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		       <input type="text" class="form-control" id="PassingYear" placeholder="Passing Year">
+		       <input type="text" class="form-control" id="PassingYear" placeholder="Ex - 2017">
 		    </div>
 		    <div class="form-group col-md-4">
-		      <label for="Percentage" class="col-form-label">Percentage/CGPA</label>
-		      <input type="text" class="form-control" id="Percentage" placeholder="Percentage or CGPA">
+		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
+		      <input type="text" class="form-control" id="Percentage" placeholder="Ex - 78">
 		    </div>
 		    <div class="form-group col-md-4">
 		      <label for="Board" class="col-form-label">Board / Specialization</label>
-		      <input type="text" class="form-control" id="Board" placeholder="CBSE">
+		      <input type="text" class="form-control" id="Board" placeholder="Ex. - CBSE / Btech">
 		    </div>
 	 	 </div>
+	 	 <hr>
+	 	 <div class="form-row">
+		    <div class="form-group col-md-5">
+		      <label for="Qualification" class="col-form-label">2. Qualification</label>
+		      <select id="Qualification" class="form-control">
+		      	<option value="1">Less than 10th</option>
+			    <option value="10th">10th</option>
+			    <option value="12th">12th</option>
+			    <option value="Diploma">Diploma</option>
+			    <option value="Graduation">Graduation</option>
+			    <option value="Post Graduation">Post Graduation</option>   
+			  </select>
+		    </div>
+		    <div class="form-group col-md-5 ml-auto">
+		      <label for="Course" class="col-form-label">College/Institute</label>
+		       <input type="text" class="form-control" id="Course" placeholder="College or Institute Name">
+		    </div>
+	 	 </div>
+	 	 <div class="form-row">
+		    <div class="form-group col-md-4">
+		      <label for="PassingYear" class="col-form-label">Passing Year</label>
+		       <input type="text" class="form-control" id="PassingYear" placeholder="Ex - 2017">
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
+		      <input type="text" class="form-control" id="Percentage" placeholder="Ex - 78">
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Board" class="col-form-label">Board / Specialization</label>
+		      <input type="text" class="form-control" id="Board" placeholder="Ex. - CBSE / Btech">
+		    </div>
+	 	 </div>
+	 	 <hr>
+	 	 <div class="form-row">
+		    <div class="form-group col-md-5">
+		      <label for="Qualification" class="col-form-label">3. Qualification</label>
+		      <select id="Qualification" class="form-control">
+		      	<option value="1">Less than 10th</option>
+			    <option value="10th">10th</option>
+			    <option value="12th">12th</option>
+			    <option value="Diploma">Diploma</option>
+			    <option value="Graduation">Graduation</option>
+			    <option value="Post Graduation">Post Graduation</option>   
+			  </select>
+		    </div>
+		    <div class="form-group col-md-5 ml-auto">
+		      <label for="Course" class="col-form-label">College/Institute</label>
+		       <input type="text" class="form-control" id="Course" placeholder="College or Institute Name">
+		    </div>
+	 	 </div>
+	 	 <div class="form-row">
+		    <div class="form-group col-md-4">
+		      <label for="PassingYear" class="col-form-label">Passing Year</label>
+		       <input type="text" class="form-control" id="PassingYear" placeholder="Ex - 2017">
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
+		      <input type="text" class="form-control" id="Percentage" placeholder="Ex - 78">
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Board" class="col-form-label">Board / Specialization</label>
+		      <input type="text" class="form-control" id="Board" placeholder="Ex. - CBSE / Btech">
+		    </div>
+	 	 </div>
+	 	 <hr>
+	 	 <div class="form-row">
+		    <div class="form-group col-md-5">
+		      <label for="Qualification" class="col-form-label">4. Qualification</label>
+		      <select id="Qualification" class="form-control">
+		      	<option value="1">Less than 10th</option>
+			    <option value="10th">10th</option>
+			    <option value="12th">12th</option>
+			    <option value="Diploma">Diploma</option>
+			    <option value="Graduation">Graduation</option>
+			    <option value="Post Graduation">Post Graduation</option>   
+			  </select>
+		    </div>
+		    <div class="form-group col-md-5 ml-auto">
+		      <label for="Course" class="col-form-label">College/Institute</label>
+		       <input type="text" class="form-control" id="Course" placeholder="College or Institute Name">
+		    </div>
+	 	 </div>
+	 	 <div class="form-row">
+		    <div class="form-group col-md-4">
+		      <label for="PassingYear" class="col-form-label">Passing Year</label>
+		       <input type="text" class="form-control" id="PassingYear" placeholder="Ex - 2017">
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
+		      <input type="text" class="form-control" id="Percentage" placeholder="Ex - 78">
+		    </div>
+		    <div class="form-group col-md-4">
+		      <label for="Board" class="col-form-label">Board / Specialization</label>
+		      <input type="text" class="form-control" id="Board" placeholder="Ex. - CBSE / Btech">
+		    </div>
+	 	 </div>
+
+	 	 
+	 	 
+
 
 	 	 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-4 col-form-label"><h5>Co-Curriculum Activities -</h5></label>
 		      <div class="col-sm-8">
-		       	<input type="text" class="form-control" id="Year" placeholder="Leadership projects,Workshops,Seminars ">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex - Leadership projects, Workshops, Seminars ">
 		      </div>
 		 </div>
 
 		 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-4 col-form-label"><h5>IT Skills -</h5></label>
 		      <div class="col-sm-8">
-		       	<input type="text" class="form-control" id="Year" placeholder="SECURITY, NETWORKING">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex - MS Office, Tally, Accounting">
 		      </div>
 		 </div>
 
 		 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-4 col-form-label"><h5>Language’s Know -</h5></label>
 		      <div class="col-sm-8">
-		       	<input type="text" class="form-control" id="Year" placeholder="German, French, Spanish">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex - English, Hindi, Marathi">
 		      </div>
 		 </div>
 
@@ -215,15 +321,27 @@ input[readonly] {
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Current / Last Salary -</h5></label>
 		      <div class="col-sm-3">
-		       	<input type="text" class="form-control" id="Year" placeholder="Monthly/ Annum (in Rs.)">
-		      </div>      
+		       	<input type="text" class="form-control" id="Year" placeholder="INR">
+		      </div> 
+		      <div class="col-sm-4">
+		       	<select class="custom-select d-block my-0" required>
+				    <option value="1">Annual CTC</option>
+				    <option value="2">Monthly</option>
+			  	</select>
+		      </div>     
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Expected Salary -</h5></label>
 		      <div class="col-sm-3">
-		       	<input type="text" class="form-control" id="Year" placeholder="Monthly/ Annum (in Rs.)">
-		      </div>      
+		       	<input type="text" class="form-control" id="Year" placeholder="INR">
+		      </div>    
+		      <div class="col-sm-4">
+		       	<select class="custom-select d-block my-0" required>
+				    <option value="1">Annual CTC</option>
+				    <option value="2">Monthly</option>
+			  	</select>
+		      </div>  
 		 </div>
 
 		 <h4>Details of latest work</h4>
@@ -378,7 +496,7 @@ input[readonly] {
 			<label class="custom-control custom-checkbox">
 			  <input type="checkbox" class="custom-control-input">
 			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">Company</span>
+			  <span class="custom-control-description">Contract</span>
 			</label>
 			<label class="custom-control custom-checkbox">
 			  <input type="checkbox" class="custom-control-input">
@@ -423,42 +541,42 @@ input[readonly] {
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Role /Designation -</h5></label>     
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" placeholder="">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex. - Operator, Executive, Design Engineer etc">
 		      </div>      
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Div./Department -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" placeholder="">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex. - Maintenance,Project, Marketing, R&D etc.">
 		      </div>      
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Industry -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" placeholder="">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex. - Forging, Automative, Steel, Foundry">
 		      </div>      
 		 </div>	 
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Sector -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" placeholder="">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex. - Iron or Steel">
 		      </div>      
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Relevant Skills -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" placeholder="">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex. - Quality Assurance, Sales, ">
 		      </div>      
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Preferred Location -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" placeholder="">
+		       	<input type="text" class="form-control" id="Year" placeholder="Ex. - Delhi, Mumbai, Nagpur, Pune">
 		      </div>      
 		 </div>
 
@@ -522,6 +640,60 @@ input[readonly] {
 				</label>
 		      </div>
 		 </div>	
+		 <hr>
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Photograph - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
+
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload CV - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
+
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Adhar Card - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
+
+		 <hr>
+
 
 		 <h4>Disclaimer and Signature</h4>
 

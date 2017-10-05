@@ -38,7 +38,7 @@ input[readonly] {
 	
 
 	<div class="container">
-		<h4 class="display-4 mt-5">Employer Registration Form</h4>
+		<h4 class="display-4 mt-5">EMPLOYER REGISTRATION FORM</h4>
 	<hr>
 		<form class="mt-3">
 			<h4 class="my-2" > Company Information : </h4>
@@ -58,22 +58,8 @@ input[readonly] {
 	  </div>
 	  <div class="form-row mb-3">
 	  	<div class="form-group col-md-6">
-	  		<p class="h5 mr-2 mt-3">Sector : </p>
-		  	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
-			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">Manufacturing</span>
-			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
-			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">IT</span>
-			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
-			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">Service</span>
-			</label>
+	  		<label for="Sector" class="col-form-label">Sector</label>
+	      	<input type="text" class="form-control" id="Industry" placeholder="Sector">
 	  	</div>
 	  	<div class="form-group col-md-6">
 	  		<label for="Industry" class="col-form-label">Industry</label>
@@ -160,12 +146,12 @@ input[readonly] {
 	  	</div>
 	  	<div class="form-row">
 	  		<div class="form-group col-md-5">
-		    <label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="text" class="form-control" id="phoneNo" placeholder="020 5784XXXX">
+		    <label for="MobileNo" class="col-form-label">Mobile Number</label>
+		    <input type="text" class="form-control" id="MobileNo" placeholder="Ex - 9876543210" maxlength="10">
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
-		    <label for="MobileNo" class="col-form-label">Mobile Number</label>
-		    <input type="text" class="form-control" id="MobileNo" placeholder="98XXX78XXX">
+		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
 		  </div>
 	  	</div>
 
@@ -186,7 +172,8 @@ input[readonly] {
 		      <label for="inputEmail3" class="col-sm-2 col-form-label">No. of Employee's(Aprrox.)</label>
 		    </div>
 		    <div class="form-group row">
-		   	  <div class="col-sm-10">
+		    	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
+		   	  <div class="col-sm-9">
 		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
@@ -194,7 +181,8 @@ input[readonly] {
 		      </div>
 		    </div>
 		    <div class="form-group row">
-		   	  <div class="col-sm-10">
+		    	<label for="Roles" class="col-sm-1 col-form-label">2.</label>
+		   	  <div class="col-sm-9">
 		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
@@ -202,7 +190,8 @@ input[readonly] {
 		      </div>
 		    </div>
 		    <div class="form-group row">
-		   	  <div class="col-sm-10">
+		    	<label for="Roles" class="col-sm-1 col-form-label">3.</label>
+		   	  <div class="col-sm-9">
 		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
@@ -210,7 +199,8 @@ input[readonly] {
 		      </div>
 		    </div>
 		    <div class="form-group row">
-		   	  <div class="col-sm-10">
+		    	<label for="Roles" class="col-sm-1 col-form-label">4.</label>
+		   	  <div class="col-sm-9">
 		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
@@ -218,20 +208,24 @@ input[readonly] {
 		      </div>
 		    </div>
 		    <div class="form-group row">
-		   	  <div class="col-sm-10">
+		    	<label for="Roles" class="col-sm-1 col-form-label">5.</label>
+		   	  <div class="col-sm-9">
 		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
 		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
 		      </div>
 		    </div>
+
+
+
 	 		<div class="form-group row mt-3">
 		       <div class="col-sm-4 mt-4">
 		        <label for="inputEmail3" class="col-form-label"><h5>Cities where you have office : </h5></label>
 		      </div>
 		      <div class="col-sm-2">
 		      	<label for="TotalCities" class="col-form-label">In Total Number</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="5">
+		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - 5">
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Places</label>
@@ -240,7 +234,7 @@ input[readonly] {
 		    </div>
 		    <div class="form-group row mt-3">
 		       <div class="col-sm-4">
-		        <label for="inputEmail3" class="col-form-label"><h5>GSTIN  : </h5></label>
+		        <label for="inputEmail3" class="col-form-label"><h5>GSTIN (Optional) : </h5></label>
 		      </div>
 		      <div class="col-sm-8">
 		        <input type="text" class="form-control" id="TotalCities" placeholder="22AA000AAAAA1Z5">

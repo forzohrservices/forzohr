@@ -38,7 +38,7 @@ input[readonly] {
 	
 
 	<div class="container">
-		<h4 class="display-4 mt-5">Fresher's Registration Form</h4>
+		<h4 class="display-4 mt-5">FRESHER'S REGISTRATION FORM</h4>
 	<hr>
 		<form class="mt-3">
 			<h4 class="my-2" > Personal Information : </h4>

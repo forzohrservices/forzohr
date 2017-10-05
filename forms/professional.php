@@ -38,17 +38,17 @@ input[readonly] {
 	
 
 	<div class="container">
-		<h4 class="display-4 mt-5">Professional Registration Form</h4>
+		<h4 class="display-4 mt-5">PROFESSIONAL REGISTRATION FORM</h4>
 	<hr>
 		<form class="mt-3">
 			<h4 class="my-2" > Personal Information : </h4>
 	  <div class="form-row">
 	  	<div class="form-group col-md-2">
-	  		<label for="title" class="col-form-label">Titles</label>
+	  		<label for="title" class="col-form-label">Title</label>
 	  		  <select class="custom-select d-block my-0" required>
 			    <option value="1">Mr.</option>
-			    <option value="2">Mrs.</option>
-			    <option value="3">Miss.</option>
+			    <option value="2">Ms.</option>
+			    <option value="3">Mrs.</option>
 			  </select>
 	  	</div>
 	    <div class="form-group col-md-3">
@@ -56,12 +56,12 @@ input[readonly] {
 	      <input type="text" class="form-control" id="firstName" placeholder="First Name">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputPassword4" class="col-form-label">Middle Name</label>
-	      <input type="password" class="form-control" id="inputPassword4" placeholder="Middle Name">
+	      <label for="MiddleName" class="col-form-label">Middle Name</label>
+	      <input type="text" class="form-control" id="inputPassword4" placeholder="Middle Name">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputPassword4" class="col-form-label">Last Name</label>
-	      <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
+	      <label for="LastName" class="col-form-label">Last Name</label>
+	      <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
 	    </div>
 	  </div>
 	  <div class="form-row">
@@ -97,6 +97,25 @@ input[readonly] {
 	      	<input type="text" class="form-control" id="AadharNo">
 	  	</div>	
 	  </div>
+
+	  	<div class="form-row">
+	  		<div class="form-group col-md-5">
+		    <label for="MobileNo" class="col-form-label" >Mobile Number</label>
+		    <input type="text" class="form-control" id="MobileNo" placeholder="Ex - 9876543210" maxlength="10">
+		  </div>
+		  <div class="form-group col-md-5 ml-auto">
+		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		  </div>
+	  	</div>
+
+	  	<div class="form-row">
+	  		<div class="form-group col-md-6">
+		    <label for="email">Email address</label>
+		    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+		  </div>
+	  	</div>
+
 	  <div class="form-row">
 	  		<label for="Address" class="col-form-label">Address</label>
 	       <input type="text" class="form-control" id="State" placeholder="Address">
@@ -115,22 +134,7 @@ input[readonly] {
 	      <input type="text" class="form-control" id="inputZip">
 	    </div>
 	  </div>
-	  	<div class="form-row">
-	  		<div class="form-group col-md-6">
-		    <label for="email">Email address</label>
-		    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-		  </div>
-	  	</div>
-	  	<div class="form-row">
-	  		<div class="form-group col-md-5">
-		    <label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="020 5784XXXX">
-		  </div>
-		  <div class="form-group col-md-5 ml-auto">
-		    <label for="MobileNo" class="col-form-label">Mobile Number</label>
-		    <input type="text" class="form-control" id="MobileNo" placeholder="98XXX78XXX">
-		  </div>
-	  	</div>
+	  	
 
 	  	<h4 class="mt-3">Professional Details :</h4>
 
@@ -139,10 +143,11 @@ input[readonly] {
 		      <label for="Qualification" class="col-form-label">Highest Qualification</label>
 		      <select id="Qualification" class="form-control">
 		      	<option value="1">Less than 10th</option>
-			    <option value="2">10th</option>
-			    <option value="2">12th</option>
-			    <option value="2">Graduation</option>
-			    <option value="2">Post Graduation</option>   
+			    <option value="10th">10th</option>
+			    <option value="12th">12th</option>
+			    <option value="Diploma">Diploma</option>
+			    <option value="Graduation">Graduation</option>
+			    <option value="Post Graduation">Post Graduation</option>   
 			  </select>
 		    </div>
 		    <div class="form-group col-md-5 ml-auto">
@@ -206,15 +211,44 @@ input[readonly] {
 		     </div>
 		 </div>
 		 <div class="form-group row mt-4">
-		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Charge (Approximate) -</h5></label>
+		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Charge per consultation - (Approximate) </h5></label>
 		      <div class="col-sm-2">
 		       	<input type="text" class="form-control" id="Year" placeholder="">
 		      </div>
 		 </div>
 
+		 <div class="form-group row mt-4">
+		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Category -</h5></label>
+		      <div class="col-sm-6">
+		       		
+
+				      <select id="Qualification" class="form-control">
+				      	<option value="Electronics &amp; Repair">Electronics &amp; Repair</option>
+					    <option value="Religious &amp; Community Services">Religious &amp; Community Services</option>
+					    <option value="Travel &amp; Accommodation Lessons/Tuitions">Travel &amp; Accommodation Lessons/Tuitions</option>
+					    <option value="Real Estate Services">Real Estate Services</option>
+					    <option value="Health & Wellness">Health &amp; Wellness</option>
+					    <option value="Retail Stores">Retail Stores</option>
+					    <option value="Financial & Legal Services">Financial &amp; Legal Services</option>
+					    <option value="Home & Business Needs">Home &amp; Business Needs</option>
+					    <option value="Technical Support Services">Technical Support Services</option>
+					    <option value="Food & Catering">Food &amp; Catering</option>
+					    <option value="Automobiles">Automobiles</option>
+					    <option value="Educational institutes">Educational institutes</option>
+					    <option value="Internet Based Services">Internet Based Services</option>
+					    <option value="Wedding & Events">Wedding &amp; Events</option>
+					    <option value="Memorial service">Memorial service</option>
+
+					  </select>
+				    
+		      </div>
+		 </div>
+
+
 		 <div class="form-row">
 	  		<div class="form-group col-md-5">
-		    <label for="Specialization" class="col-form-label"><h5>Specialization / Expertise</h5></label>
+		    <label for="Specialization" class="col-form-label"><h5>Profession / Specialization / Expertise</h5></label>
+
 		     <input type="text" class="form-control mb-2" id="Specialization" placeholder="">
 		     <input type="text" class="form-control mb-2" id="Specialization" placeholder="">
 		     <input type="text" class="form-control mb-2" id="Specialization" placeholder="">
@@ -222,7 +256,7 @@ input[readonly] {
 		     <input type="text" class="form-control mb-2" id="Specialization" placeholder="">
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
-		    <label for="MobileNo" class="col-form-label"><h5>Types of Services you offered</h5></label>
+		    <label for="Services" class="col-form-label"><h5>Types of Services you offered</h5></label>
 		    <input type="text" class="form-control mb-2" id="Services" placeholder="">
 		    <input type="text" class="form-control mb-2" id="Services" placeholder="">
 		    <input type="text" class="form-control mb-2" id="Services" placeholder="">
@@ -238,23 +272,46 @@ input[readonly] {
 		      </div>
 		 </div>
 
-		 <div class="form-row mt-4">
-		    <div class="form-group col-md-6 col-xs-2 col-sm-1">
-		       <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Name</h5></label>
-		       <input type="text" class="form-control mt-1" id="State" placeholder="">
-		       <input type="text" class="form-control mt-1" id="State" placeholder="">
-		       <input type="text" class="form-control mt-1" id="State" placeholder="">
-		       <input type="text" class="form-control mt-1" id="State" placeholder="">
-		    </div>
-		    
-		    <div class="form-group col-md-6 col-xs-3 col-sm-1"> 
-		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Roles</h5></label>
-		      <input type="text" class="form-control mt-1" id="role">
-		      <input type="text" class="form-control mt-1" id="role">
-		      <input type="text" class="form-control mt-1" id="role">
-		      <input type="text" class="form-control mt-1" id="role">
-	    	</div>
-	 	</div>
+	
+	    <div class="form-group row mt-3">
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Name</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label">Role</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Name</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label">Role</label>
+		 </div>
+	   	<div class="form-group row">
+		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
+		   	  <div class="col-sm-3">
+		        <input type="text" class="form-control" id="Roles" placeholder="">
+		      </div>
+		      <div class="col-sm-2">
+		        <input type="text" class="form-control" id="Number" placeholder="">
+		      </div>
+		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
+		      <div class="col-sm-3">
+		        <input type="text" class="form-control" id="Roles" placeholder="">
+		      </div>
+		      <div class="col-sm-2">
+		        <input type="text" class="form-control" id="Number" placeholder="">
+		      </div>
+		 </div>
+		 <div class="form-group row">
+		 	<label for="Roles" class="col-sm-1 col-form-label">3.</label>
+		   	  <div class="col-sm-3">
+		        <input type="text" class="form-control" id="Roles" placeholder="">
+		      </div>
+		      <div class="col-sm-2">
+		        <input type="text" class="form-control" id="Number" placeholder="">
+		      </div>
+		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
+		      <div class="col-sm-3">
+		        <input type="text" class="form-control" id="Roles" placeholder="">
+		      </div>
+		      <div class="col-sm-2">
+		        <input type="text" class="form-control" id="Number" placeholder="">
+		      </div>
+		 </div>
+	 
 
 	 	<h4 class="mt-3">Location of Services :</h4>
 				<div class="form-group row mt-3">
@@ -270,7 +327,59 @@ input[readonly] {
 		        <input type="text" class="form-control" id="TotalCities" placeholder="Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		    </div>
+		<hr>
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Photograph - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
 
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload CV - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
+
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Adhar Card - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
+
+		 <hr>
 
 		<div class="form-row">
 	 	 	<label class="custom-control custom-checkbox">
