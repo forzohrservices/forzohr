@@ -5,6 +5,10 @@
 ?>
 
 <title>4zoHr - Contractor Registration Form</title>
+
+
+
+
 <style type="text/css">
 
 
@@ -32,7 +36,30 @@ input[readonly] {
   cursor: text !important;
 }
 
+
 </style>
+
+<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "dropdowns/sector.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+
+
+
 <body>
 
 	
@@ -152,13 +179,15 @@ input[readonly] {
 	  	<div class="form-row">
 	  		<div class="form-group col-md-6">
 	  			<label for="Sector">Sector</label>
-	  			<input type="text" class="form-control" id="Sector" placeholder="">
+	  			<input type="text" class="form-control" id="Sector" placeholder="" onkeyup="showHint(this.value)">
+	  			<span id="txtHint"></span>
 	  		</div>
 	  		<div class="form-group col-md-6">
 	  			<label for="Industry">Industry</label>
 	  			<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 	  		</div>
 	  	</div>
+
 	  	<div class="form-row">
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">Highest Qualification</label>
@@ -750,3 +779,4 @@ input[readonly] {
 	 	  <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
 	</form>
 </div>     
+

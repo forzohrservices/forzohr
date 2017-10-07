@@ -59,7 +59,8 @@ input[readonly] {
 	  <div class="form-row mb-3">
 	  	<div class="form-group col-md-6">
 	  		<label for="Sector" class="col-form-label">Sector</label>
-	      	<input type="text" class="form-control" id="Industry" placeholder="Sector">
+	      	<input type="text" class="form-control" id="Sector" placeholder="" onkeyup="showHint(this.value)">
+	  		<span id="txtHint"></span>
 	  	</div>
 	  	<div class="form-group col-md-6">
 	  		<label for="Industry" class="col-form-label">Industry</label>
@@ -274,6 +275,23 @@ $(document).ready( function() {
         
     });
 });
-	</script>
+
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "dropdowns/sector.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+
+</script>
 
 </body>

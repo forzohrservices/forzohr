@@ -172,7 +172,8 @@ input[readonly] {
 	  	<div class="form-row">
 	  		<div class="form-group col-md-6">
 	  			<label for="Sector">Sector</label>
-	  			<input type="text" class="form-control" id="Sector" placeholder="">
+	  			<input type="text" class="form-control" id="Sector" placeholder="" onkeyup="showHint(this.value)">
+	  			<span id="txtHint"></span>
 	  		</div>
 	  		<div class="form-group col-md-6">
 	  			<label for="Industry">Industry</label>
@@ -573,7 +574,6 @@ input[readonly] {
 	 	  <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
 	</form>
 </div>     
-
 	<script>
 $(document).on('change', '.btn-file :file', function() {
   var input = $(this),
@@ -596,4 +596,21 @@ $(document).ready( function() {
         
     });
 });
-	</script>
+
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "dropdowns/sector.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+
+</script>

@@ -274,10 +274,10 @@ input[readonly] {
 
 	
 	    <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Name</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">Role</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Name</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">Role</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Name</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Role</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Name</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Role</label>
 		 </div>
 	   	<div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
@@ -427,6 +427,8 @@ $(document).ready( function() {
         
     });
 });
-	</script>
 
+
+
+</script>
 </body>

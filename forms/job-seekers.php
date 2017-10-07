@@ -373,7 +373,8 @@ input[readonly] {
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Sector" class="col-form-label">Sector</label>
-		       	<input type="text" class="form-control" id="Sector" placeholder="Sector">
+		       	<input type="text" class="form-control" id="Sector" placeholder="" onkeyup="showHint(this.value)">
+	  			<span id="txtHint"></span>
 		 	</div>
 		 </div>
 		 <div class="form-group row mt-3">
@@ -717,3 +718,44 @@ input[readonly] {
 	 	  <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
 	</form>
 </div>     
+
+	<script>
+$(document).on('change', '.btn-file :file', function() {
+  var input = $(this),
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+  input.trigger('fileselect', [numFiles, label]);
+});
+
+$(document).ready( function() {
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        
+        var input = $(this).parents('.input-group').find(':text'),
+            log = numFiles > 1 ? numFiles + ' files selected' : label;
+        
+        if( input.length ) {
+            input.val(log);
+        } else {
+            if( log ) alert(log);
+        }
+        
+    });
+});
+
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "dropdowns/sector.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+
+</script>
