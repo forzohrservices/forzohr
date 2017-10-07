@@ -94,7 +94,7 @@ input[readonly] {
 		</div>	
 		<div class="form-group col-md-4">
 	  		<label for="AadharNo" class="col-form-label">Aadhar Card Number</label>
-	      	<input type="text" class="form-control" id="AadharNo">
+	      	<input type="text" class="form-control" id="AadharNo" maxlength="12">
 	  	</div>	
 	  </div>
 
@@ -105,7 +105,7 @@ input[readonly] {
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
 		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789" maxlength="6">
 		  </div>
 	  	</div>
 	  	<div class="form-row">
@@ -130,8 +130,8 @@ input[readonly] {
 	       <input type="City" class="form-control" id="Percentage" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputZip" class="col-form-label">Zip</label>
-	      <input type="text" class="form-control" id="inputZip">
+	      <label for="Pincode" class="col-form-label">Pincode</label>
+	      <input type="text" class="form-control" id="Pincode" maxlength="6">
 	    </div>
 	  </div>
 	  	
@@ -156,7 +156,7 @@ input[readonly] {
 	  		</div>
 	  		<div class="form-group col-md-6">
 	  			<label for="Industry">Industry</label>
-	  			<input type="text" class="form-control" id="Industry" placeholder="">
+	  			<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 	  		</div>
 	  	</div>
 	  	<div class="form-row">
@@ -186,11 +186,11 @@ input[readonly] {
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Professional Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" id="Year" placeholder="Year">
+		       	<input type="text" class="form-control" id="Year" placeholder="Year" maxlength="4">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="months" class="col-form-label">Months</label>
-		       	<input type="text" class="form-control" id="months" placeholder="Months">
+		       	<input type="text" class="form-control" id="months" placeholder="Months" maxlength="2">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="projects" class="col-form-label">Number of Projects</label>
@@ -265,10 +265,10 @@ input[readonly] {
 		 <h5 class="mt-5">Top Management Team (please mention team details you have)</h5>
 
 		 <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Roles</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In No.</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Roles</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In No.</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Roles</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Team size (In No.)</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Roles</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Team size (In No.)</label>
 		 </div>
 		 <div class="form-group row">
 		 	
@@ -341,10 +341,10 @@ input[readonly] {
 		 <h5 class="mt-4">Lower Management Team (please mention team details you have)</h5>
 
 		 <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Roles</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In No.</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Roles</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In No.</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Roles</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Team size (In No.).</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Roles</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Team size (In No.)</label>
 		 </div>
 		 		 <div class="form-group row">
 		 	
@@ -417,10 +417,10 @@ input[readonly] {
 		 <h5 class="mt-4">Labour and Worker Team (please mention team details you have)</h5>
 
 		 <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Roles</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In No.</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Roles</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In No.</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Roles</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Team size (In No.)</label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Roles</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Team size (In No.)</label>
 		 </div>
 		 		 <div class="form-group row">
 		 	
@@ -492,9 +492,9 @@ input[readonly] {
 		 <h4 class="mt-4">List of Machineries, Tools and Tackles</h4>
 
 		 <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Description</h5></label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Description</h5></label>
 		      <label for="Number" class="col-sm-2 col-form-label">Quantity (in sets)</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Description</h5></label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Description</h5></label>
 		      <label for="Number" class="col-sm-2 col-form-label">Quantity (in sets)</label>
 		 </div>
 		 		 <div class="form-group row">
@@ -574,9 +574,9 @@ input[readonly] {
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Name</h5></label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Name</h5></label>
 		      <label for="Number" class="col-sm-2 col-form-label">Contact No. (optional)</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Name</h5></label>
+		      <label for="Roles" class="col-sm-4 col-form-label"><h5 class="text-center">Name</h5></label>
 		      <label for="Number" class="col-sm-2 col-form-label">Contact No. (optional)</label>
 		 </div>
 		 		 <div class="form-group row">
@@ -672,7 +672,7 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Places</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Delhi, Banglore, Mumbai, Nagpur">
+		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		 </div>
 
@@ -686,7 +686,7 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Industries</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Forging, Foundry, Steel.. etc">
+		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - Forging, Foundry, Steel.. etc">
 		      </div>
 		 </div>
 
@@ -708,9 +708,42 @@ input[readonly] {
 			  <span class="custom-control-description">ESIC</span>
 			</label>
 			 <div class="col-sm-3">
-			 	
-		        <input type="text" class="form-control" id="other" placeholder="If other mention it">
+			    <input type="text" class="form-control" id="other" placeholder="If other mention it">
 		     </div>
+		 </div>
+
+		 		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Photograph - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
+		 </div>
+
+		 <div class="row mt-3">
+		       <div class="col-sm-4">
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Adhar Card - </h5></label>
+		      </div>
+		      <div class="col-sm-6">
+		      	<div class="input-group col-md-6">
+                <span class="input-group-btn">
+                    <span class="btn btn-secondary btn-file">
+                        Browse&hellip; <input type="file" single>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+		      </div>
+		      
 		 </div>
 
 

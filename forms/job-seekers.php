@@ -94,7 +94,7 @@ input[readonly] {
 		</div>	
 		<div class="form-group col-md-4">
 	  		<label for="AadharNo" class="col-form-label">Aadhar Card Number</label>
-	      	<input type="text" class="form-control" id="AadharNo">
+	      	<input type="text" class="form-control" id="AadharNo" maxlength="12">
 	  	</div>	
 	  </div>
 
@@ -105,7 +105,7 @@ input[readonly] {
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
 		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789" maxlength="6">
 		  </div>
 	  	</div>
 
@@ -130,8 +130,8 @@ input[readonly] {
 	       <input type="City" class="form-control" id="City" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputZip" class="col-form-label">Zip</label>
-	      <input type="text" class="form-control" id="inputZip">
+	      <label for="Pincode" class="col-form-label">Pincode</label>
+	      <input type="text" class="form-control" id="Pincode" maxlength="6">
 	    </div>
 	  </div>
 	  	
@@ -310,11 +310,11 @@ input[readonly] {
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Total work Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" id="Year" placeholder="Year">
+		       	<input type="text" class="form-control" id="Year" placeholder="Year" maxlength="4">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Months</label>
-		       	<input type="text" class="form-control" id="Year" placeholder="Months">
+		       	<input type="text" class="form-control" id="Year" placeholder="Months" maxlength="2">
 		      </div>
 		 </div>
 
@@ -369,7 +369,7 @@ input[readonly] {
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="Industry" class="col-form-label">Industry</label>
-		       	<input type="text" class="form-control" id="Industry" placeholder="Your Role/Designation">
+		       	<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Sector" class="col-form-label">Sector</label>
@@ -432,7 +432,7 @@ input[readonly] {
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="Industry" class="col-form-label">Industry</label>
-		       	<input type="text" class="form-control" id="Industry" placeholder="Your Role/Designation">
+		       	<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Sector" class="col-form-label">Sector</label>
@@ -709,7 +709,8 @@ input[readonly] {
 	 	 	<label class="custom-control custom-checkbox">
 			  <input type="checkbox" class="custom-control-input">
 			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">I certify that my answers are true and complete to the best of my knowledge.</span>
+			  <span class="custom-control-description">If the application leads to employment, I understand that false or misleading information in my application or interview may
+				result in my release.</span>
 			</label>
 	 	</div>
 

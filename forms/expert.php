@@ -114,7 +114,7 @@ input[readonly] {
 		</div>	
 		<div class="form-group col-md-4">
 	  		<label for="AadharNo" class="col-form-label">Aadhar Card Number</label>
-	      	<input type="text" class="form-control" id="AadharNo">
+	      	<input type="text" class="form-control" id="AadharNo" maxlength="12">
 	  	</div>	
 	  </div>
 
@@ -125,7 +125,7 @@ input[readonly] {
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
 		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789" >
 		  </div>
 	  	</div>
 
@@ -150,8 +150,8 @@ input[readonly] {
 	       <input type="City" class="form-control" id="Percentage" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputZip" class="col-form-label">Zip</label>
-	      <input type="text" class="form-control" id="inputZip">
+	      <label for="Pincode" class="col-form-label">Pincode</label>
+	      <input type="text" class="form-control" id="Pincode" maxlength="6">
 	    </div>
 	  </div>
 	  	
@@ -176,7 +176,7 @@ input[readonly] {
 	  		</div>
 	  		<div class="form-group col-md-6">
 	  			<label for="Industry">Industry</label>
-	  			<input type="text" class="form-control" id="Industry" placeholder="">
+	  			<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 	  		</div>
 	  	</div>
 	  	<div class="form-row">
@@ -206,11 +206,11 @@ input[readonly] {
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Work Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" id="Year" placeholder="Year">
+		       	<input type="text" class="form-control" id="Year" placeholder="Year" maxlength="4">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="months" class="col-form-label">Months</label>
-		       	<input type="text" class="form-control" id="months" placeholder="Months">
+		       	<input type="text" class="form-control" id="months" placeholder="Months" maxlength="2">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="projects" class="col-form-label">Charge in rupees (Approximate)</label>
@@ -251,10 +251,10 @@ input[readonly] {
 
 
 		  <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Certificate Name</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">Year</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Certificate Name</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">Year</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Certificate Name</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Year</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Certificate Name</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Year</label>
 		 </div>
 		 <div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
@@ -343,10 +343,10 @@ input[readonly] {
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Description</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In Number</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Description</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In Number</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Description</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">In Number</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Description</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">In Number</label>
 		 </div>
 		 <div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
@@ -391,10 +391,10 @@ input[readonly] {
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Description</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In Number</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Description</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">In Number</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Description</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">In Number</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Description</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">In Number</label>
 		 </div>
 		 <div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
@@ -440,10 +440,10 @@ input[readonly] {
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Details</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">Role</label>
-		      <label for="Roles" class="col-sm-4 col-form-label"><h5>Details</h5></label>
-		      <label for="Number" class="col-sm-2 col-form-label">Role</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Details</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Role</label>
+		      <label for="Roles" class="col-sm-4 col-form-label text-center"><h5>Details</h5></label>
+		      <label for="Number" class="col-sm-2 col-form-label text-center">Role</label>
 		 </div>
 				 <div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
@@ -488,7 +488,7 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Places</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Delhi, Banglore, Mumbai, Nagpur">
+		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		 </div>
 		 <hr>

@@ -94,7 +94,7 @@ input[readonly] {
 		</div>	
 		<div class="form-group col-md-4">
 	  		<label for="AadharNo" class="col-form-label">Aadhar Card Number</label>
-	      	<input type="text" class="form-control" id="AadharNo">
+	      	<input type="text" class="form-control" id="AadharNo" maxlength="12">
 	  	</div>	
 	  </div>
 
@@ -105,7 +105,7 @@ input[readonly] {
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
 		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789" >
 		  </div>
 	  	</div>
 
@@ -130,8 +130,8 @@ input[readonly] {
 	       <input type="City" class="form-control" id="Percentage" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputZip" class="col-form-label">Zip</label>
-	      <input type="text" class="form-control" id="inputZip">
+	      <label for="Pincode" class="col-form-label">Pincode</label>
+	      <input type="text" class="form-control" id="Pincode" maxlength="6">
 	    </div>
 	  </div>
 	  	
@@ -165,11 +165,11 @@ input[readonly] {
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Professional Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" id="Year" placeholder="Year">
+		       	<input type="text" class="form-control" id="Year" placeholder="Year" maxlength="4">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Months</label>
-		       	<input type="text" class="form-control" id="Year" placeholder="Months">
+		       	<input type="text" class="form-control" id="Year" placeholder="Months" maxlength="2">
 		      </div>
 		 </div>
 		 <div class="form-group row mt-4">
@@ -324,7 +324,7 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Places</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Delhi, Banglore, Mumbai, Nagpur">
+		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		    </div>
 		<hr>

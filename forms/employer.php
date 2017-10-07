@@ -49,7 +49,7 @@ input[readonly] {
 	  <div class="form-row mb-3">
 	  	<div class="form-group col-md-6">
 	  		<label for="FoundedYear" class="col-form-label">Founded Year</label>
-	      	<input type="text" class="form-control" id="FoundedYear" placeholder="Founded Year">
+	      	<input type="text" class="form-control" id="FoundedYear" placeholder="Founded Year" maxlength="4">
 	    </div>
 		<div class="form-group col-md-6">
 			<label for="Employee" class="col-form-label">Total Number of Employee's (Approx)</label>
@@ -63,7 +63,7 @@ input[readonly] {
 	  	</div>
 	  	<div class="form-group col-md-6">
 	  		<label for="Industry" class="col-form-label">Industry</label>
-	      	<input type="text" class="form-control" id="Industry" placeholder="Industry">
+	      	<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 	  	</div>
 	  </div>
 	  <div class="form-row">
@@ -120,8 +120,8 @@ input[readonly] {
 	       <input type="City" class="form-control" id="Percentage" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputZip" class="col-form-label">Zip</label>
-	      <input type="text" class="form-control" id="inputZip">
+	      <label for="Pincode" class="col-form-label">Pincode</label>
+	      <input type="text" class="form-control" id="Pincode" placeholder="Pincode" maxlength="6">
 	    </div>
 	  </div>
 
@@ -229,7 +229,7 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Places</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Delhi, Banglore, Mumbai, Nagpur">
+		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		    </div>
 		    <div class="form-group row mt-3">
