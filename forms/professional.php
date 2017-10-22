@@ -1,54 +1,26 @@
 <?php
 	include'routes.php';
 	include'header.php';
+	include'process/professional.php';
 
 ?>
 
 <title>4zoHr - Professional Registration Form</title>
-<style type="text/css">
 
-
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-.btn-file input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 100px;
-  text-align: right;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  background: red;
-  cursor: inherit;
-  display: block;
-}
-input[readonly] {
-  background-color: white !important;
-  cursor: text !important;
-}
-
-</style>
 <body>
-
-
 
 	<div class="container">
 		<h4 class="display-4 mt-5">PROFESSIONAL REGISTRATION FORM</h4>
 	<hr>
-		<form class="mt-3">
+		<form class="mt-3" enctype="multipart/form-data" method="post">
 			<h4 class="my-2" > Personal Information : </h4>
 	  <div class="form-row">
 	  	<div class="form-group col-md-2">
 	  		<label for="title" class="col-form-label">Title</label>
-	  		  <select class="custom-select d-block my-0" required>
-			    <option value="1">Mr.</option>
-			    <option value="2">Ms.</option>
-			    <option value="3">Mrs.</option>
+	  		  <select class="custom-select d-block my-0" required name="title">
+			    <option value="Mr.">Mr.</option>
+			    <option value="Ms.">Ms.</option>
+			    <option value="Mrs.">Mrs.</option>
 			  </select>
 	  	</div>
 	    <div class="form-group col-md-3">
@@ -68,18 +40,19 @@ input[readonly] {
 	  	<div class="form-group col-md-2">
 	  	<label for="gender" class="col-form-label">Gender</label>
 	  		<select class="custom-select d-block my-0" name="gender" required>
-			    <option value="1">Male</option>
-			    <option value="2">Female</option>
+			    <option value="Male">Male</option>
+			    <option value="Female">Female</option>
 			</select>
 		</div>
 		<div class="form-group col-md-2">
 	  	<label for="MaritialStatus" class="col-form-label">Maritial Status</label>
-	  		<select class="custom-select d-block my-0" name="marry" required>
-			    <option value="1">Single</option>
-			    <option value="2">Maried</option>
-			    <option value="2">Divorced</option>
-			    <option value="2">Widowed</option>
-			    <option value="2">Separated</option>
+	  		<select class="custom-select d-block my-0" name="status" required>
+	  			<option>Select</option>
+			    <option value="Single">Single</option>
+			    <option value="Maried">Maried</option>
+			    <option value="Divorced">Divorced</option>
+			    <option value="Widowed">Widowed</option>
+			    <option value="Separated">Separated</option>  
 			</select>
 		</div>
 		<div class="form-group col-md-4">
@@ -104,8 +77,8 @@ input[readonly] {
 		    <input type="text" class="form-control" name="mobile" placeholder="Ex - 9876543210" maxlength="10">
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
-		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" name="phone" placeholder="Ex - 012 345789" >
+		  	<label for="phone" class="col-form-label">Phone Number (with pincode)</label>
+		    <input type="text" class="form-control" name="phone" placeholder="Ex - 012 345789" maxlength="10">
 		  </div>
 	  	</div>
 
@@ -127,7 +100,7 @@ input[readonly] {
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="City" class="col-form-label">City</label>
-	       <input type="City" class="form-control" name="city" placeholder="City">
+	       <input type="text" class="form-control" name="city" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
 	      <label for="Pincode" class="col-form-label">Pincode</label>
@@ -142,7 +115,7 @@ input[readonly] {
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">Highest Qualification</label>
 		      <select name="qualification" class="form-control">
-		      	<option value="1">Less than 10th</option>
+		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
 			    <option value="Diploma">Diploma</option>
@@ -255,6 +228,7 @@ input[readonly] {
 		     <input type="text" class="form-control mb-2" name="sp4" placeholder="">
 		     <input type="text" class="form-control mb-2" name="sp5" placeholder="">
 		  </div>
+
 		  <div class="form-group col-md-5 ml-auto">
 		    <label for="Services" class="col-form-label"><h5>Types of Services you offered</h5></label>
 		    <input type="text" class="form-control mb-2" name="s1" placeholder="">
@@ -268,7 +242,7 @@ input[readonly] {
 	  	<div class="form-group row mt-4">
 		      <label for="teamDetails" class="col-sm-5 col-form-label"><h5>Team details (if you have) (In total no.) -</h5></label>
 		      <div class="col-sm-4">
-		       	<input type="text" class="form-control col-sm-2" name="team_details" placeholder="">
+		       	<input type="text" class="form-control col-sm-2" name="noTeam" placeholder="">
 		      </div>
 		 </div>
 
@@ -282,33 +256,33 @@ input[readonly] {
 	   	<div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
 		   	  <div class="col-sm-3">
-		        <input type="text" class="form-control" name="r1" placeholder="">
+		        <input type="text" class="form-control" name="t1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n1" placeholder="">
+		        <input type="text" class="form-control" name="tn1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
-		        <input type="text" class="form-control" name="r2" placeholder="">
+		        <input type="text" class="form-control" name="t2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n2" placeholder="">
+		        <input type="text" class="form-control" name="tn2" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
 		 	<label for="Roles" class="col-sm-1 col-form-label">3.</label>
 		   	  <div class="col-sm-3">
-		        <input type="text" class="form-control" name="r3" placeholder="">
+		        <input type="text" class="form-control" name="t3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n3" placeholder="">
+		        <input type="text" class="form-control" name="tn3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
-		        <input type="text" class="form-control" name="r4" placeholder="">
+		        <input type="text" class="form-control" name="t4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n4" placeholder="">
+		        <input type="text" class="form-control" name="tn4" placeholder="">
 		      </div>
 		 </div>
 
@@ -319,12 +293,12 @@ input[readonly] {
 		        <label for="inputEmail3" class="col-form-label"><h5>Cities where you have office : </h5></label>
 		      </div>
 		      <div class="col-sm-2">
-		      	<label for="TotalCities" class="col-form-label">In Total Number</label>
-		        <input type="text" class="form-control" name="total_cities" placeholder="4">
+		      	<label for="noOfcities" class="col-form-label">In Total Number</label>
+		        <input type="text" class="form-control" name="noOfcities" placeholder="4">
 		      </div>
 		      <div class="col-sm-6">
 		      	<label for="TotalCities" class="col-form-label">Places</label>
-		        <input type="text" class="form-control" name="place" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
+		        <input type="text" class="form-control" name="places" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		    </div>
 		<hr>
@@ -334,63 +308,52 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <span class="input-group-btn">
-                    <span class="btn btn-secondary btn-file">
-                        Browse&hellip; <input type="file" single>
-                    </span>
-                </span>
-                <input type="text" class="form-control" readonly>
+                
+                <input type="file" accept="image/png, image/jpeg, image/gif" placeholder="Images only jpeg"  name="photoUpload"/>
+                
             </div>
 		      </div>
-
+		      
 		 </div>
 
 		 <div class="row mt-3">
 		       <div class="col-sm-4">
-		        <label for="inputEmail3" class="col-form-label"><h5>Upload CV - </h5></label>
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Aadhaar Card - </h5></label>
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <span class="input-group-btn">
-                    <span class="btn btn-secondary btn-file">
-                        Browse&hellip; <input type="file" single>
-                    </span>
-                </span>
-                <input type="text" class="form-control" readonly>
+                <input type="file" accept="image/png, image/jpeg, image/gif" placeholder="Images only jpeg"  name="aadhaarUpload"/>
             </div>
 		      </div>
-
+		      
 		 </div>
 
 		 <div class="row mt-3">
 		       <div class="col-sm-4">
-		        <label for="inputEmail3" class="col-form-label"><h5>Upload Adhar Card - </h5></label>
+		        <label for="cvUpload" class="col-form-label"><h5>Upload CV/Resume - </h5></label>
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <span class="input-group-btn">
-                    <span class="btn btn-secondary btn-file">
-                        Browse&hellip; <input type="file" single>
-                    </span>
-                </span>
-                <input type="text" class="form-control" readonly>
+                <input type="file" accept="application/docx, application/doc, application/rtf, application/pdf" placeholder="doc, docx, rtf and pdf only"  name="cvUpload"/>
             </div>
 		      </div>
-
+		      
 		 </div>
+
+
 
 		 <hr>
 
 		<div class="form-row">
 	 	 	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="disclaimer[]" value="I certify that my answers are true and complete to the best of my knowledge.">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">I certify that my answers are true and complete to the best of my knowledge.</span>
 			</label>
 	 	</div>
 	 	<div class="form-row">
 	 	 	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="disclaimer[]" value="I understand that false or misleading information in my application may result in my release.">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">I understand that false or misleading information in my application may result in my release.</span>
 			</label>
@@ -400,35 +363,12 @@ input[readonly] {
 
 
 
-	  <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
+	  <button type="submit" name="submit" class="btn btn-info btn-lg mb-5 mt-5" >Submit</button>
 </form>
 	</div>
 
 
 	<script>
-$(document).on('change', '.btn-file :file', function() {
-  var input = $(this),
-      numFiles = input.get(0).files ? input.get(0).files.length : 1,
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-  input.trigger('fileselect', [numFiles, label]);
-});
-
-$(document).ready( function() {
-    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-
-        var input = $(this).parents('.input-group').find(':text'),
-            log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-        if( input.length ) {
-            input.val(log);
-        } else {
-            if( log ) alert(log);
-        }
-
-    });
-});
-
-
 
 </script>
 </body>

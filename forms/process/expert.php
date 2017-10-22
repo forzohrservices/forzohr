@@ -56,7 +56,7 @@
 		$validextensions = array( "docx", "pdf", "rtf", "doc");
 		$temporary = explode(".", $_FILES[$tagName]["name"]);
 		$file_extension = end($temporary);
-		$imgFullpath="";
+		$docFullpath="";
 
 	    if ((($_FILES[$tagName]["type"] == "application/docx") || ($_FILES[$tagName]["type"] == "application/pdf") || ($_FILES[$tagName]["type"] == "application/doc") || ($_FILES[$tagName]["type"] == "application/rtf") 
 	    ) && ($_FILES[$tagName]["size"] < 2097152)//Approx. 2Mb files can be uploaded.
@@ -266,7 +266,7 @@
 						</div>
 					</div>
 				';
-				  echo "Error: " . $query . "<br>" . $conn->error;
+				  //echo "Error: " . $query . "<br>" . $conn->error;
 
 			   
 			}

@@ -31,7 +31,7 @@
                     $subject = $_POST['subject'];
                     //$content = "<strong>Name:</strong>" .($_POST['inputFname']). ($_POST['inputLname']);
                     //$content = $_POST['content'];
-                    $content = "First Name :".$inputFname.'  Last Name :'.$inputLname."\n \n".$_POST['content'];
+                    $content = "Name :".$inputFname." ".$inputLname." \n \n ".$_POST['content']."\n \n".$_POST['subject'];
                     $headers ="From: ".$_POST['email'];//.'<'.$_POST['inputFname'].$_POST['inputLname'];
                     if(mail($emailTo, $subject, $content, $headers)) {
                         $successMessage = '<div class="alert alert-success" role="alert">
@@ -104,8 +104,8 @@
         </div>
 
         <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" class="form-control" id="subject" name="subject">
+          <label for="subject">Contact Number</label>
+          <input type="text" class="form-control" id="subject" maxlength="10" name="subject">
     </div>
 
 
@@ -123,7 +123,7 @@
 </div>
 </div>
         
-<hr class="style1">
+
           
           
 
@@ -151,7 +151,7 @@ if ($("#email").val() == ""){
     error += "The email address required.<br>";
 }
 if ($("#subject").val() == ""){
-    error += "The subject field required.<br>";
+    error += "The Contact Number is required.<br>";
 }
 if ($("#content").val() == ""){
     error += "The content field required.";
