@@ -1,107 +1,79 @@
 <?php
 	include'routes.php';
 	include'header.php';
+	include'process/employer.php';
 
 ?>
 
 <title>4zoHr - Employer Registration Form</title>
-<style type="text/css">
 
-
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-.btn-file input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 100px;
-  text-align: right;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  background: red;
-  cursor: inherit;
-  display: block;
-}
-input[readonly] {
-  background-color: white !important;
-  cursor: text !important;
-}
-
-</style>
 <body>
-
-	
 
 	<div class="container">
 		<h4 class="display-4 mt-5">EMPLOYER REGISTRATION FORM</h4>
 	<hr>
-		<form class="mt-3">
+		<form enctype="multipart/form-data" class="mt-3" method="POST">
 			<h4 class="my-2" > Company Information : </h4>
 	  <div class="form-row mb-3">
 	  		<label for="CompanyName" class="col-form-label">Company Name</label>
-	      	<input type="text" class="form-control" id="CompanyName" placeholder="Company Name">
+	      	<input type="text" class="form-control" name="CompanyName" id="CompanyName" placeholder="Company Name">
 	  </div>
 	  <div class="form-row mb-3">
 	  	<div class="form-group col-md-6">
 	  		<label for="FoundedYear" class="col-form-label">Founded Year</label>
-	      	<input type="text" class="form-control" id="FoundedYear" placeholder="Founded Year" maxlength="4">
+	      	<input type="text" class="form-control" name="FoundedYear" id="FoundedYear" placeholder="Founded Year" maxlength="4">
 	    </div>
 		<div class="form-group col-md-6">
-			<label for="Employee" class="col-form-label">Total Number of Employee's (Approx)</label>
-	      	<input type="text" class="form-control" id="Employee" placeholder="Employee's">
+			<label for="NoOfEmployee" class="col-form-label">Total Number of Employee's (Approx)</label>
+	      	<input type="text" class="form-control" name="NoOfEmployee" id="NoOfEmployee" placeholder="Employee's">
 		</div>	  
 	  </div>
 	  <div class="form-row mb-3">
 	  	<div class="form-group col-md-6">
 	  		<label for="Sector" class="col-form-label">Sector</label>
-	      	<input type="text" class="form-control" id="Sector" placeholder="" onkeyup="showHint(this.value)">
+	      	<input type="text" class="form-control" name="Sector" id="Sector" placeholder="" onkeyup="showHint(this.value)">
 	  		<span id="txtHint"></span>
 	  	</div>
 	  	<div class="form-group col-md-6">
 	  		<label for="Industry" class="col-form-label">Industry</label>
-	      	<input type="text" class="form-control" id="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
+	      	<input type="text" class="form-control" id="Industry" name="Industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 	  	</div>
 	  </div>
 	  <div class="form-row">
 	  	<div class="form-group">
 	  		<p class="h5 mr-2">Type : </p>
 		  	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value="Start-Up">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Start-Up</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value="Small and Medium Enterprise (SME)">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Small and Medium Enterprise (SME)</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value="Individual Employer">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Individual Employer</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value=">Corporate">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Corporate</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value="Agency / HR Firm">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Agency / HR Firm</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value="Facility Management Service Agency">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Facility Management Service Agency</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input">
+			  <input type="checkbox" class="custom-control-input" name="type[]" value="Consultancy">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Consultancy</span>
 			</label>
@@ -109,20 +81,20 @@ input[readonly] {
 	  </div>
 	  <div class="form-row">
 	  		<label for="Address" class="col-form-label">Address</label>
-	       <input type="text" class="form-control" id="State" placeholder="Address">
+	       <input type="text" class="form-control" name="Address" placeholder="Address">
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-5">
 	      <label for="State" class="col-form-label">State</label>
-	       <input type="text" class="form-control" id="State" placeholder="State">
+	       <input type="text" class="form-control" id="State" name="State" placeholder="State">
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="City" class="col-form-label">City</label>
-	       <input type="City" class="form-control" id="Percentage" placeholder="City">
+	       <input type="City" class="form-control" name="City" placeholder="City">
 	    </div>
 	    <div class="form-group col-md-3">
 	      <label for="Pincode" class="col-form-label">Pincode</label>
-	      <input type="text" class="form-control" id="Pincode" placeholder="Pincode" maxlength="6">
+	      <input type="text" class="form-control" id="Pincode" name="Pincode" placeholder="Pincode" maxlength="6">
 	    </div>
 	  </div>
 
@@ -132,27 +104,27 @@ input[readonly] {
 	  	<div class="form-row mt-3">
 	  		<div class="form-group col-md-5">
 		    <label for="ContactName">Contact Person Name</label>
-		    <input type="text" class="form-control" id="ContactName" placeholder="Contact Person Name">
+		    <input type="text" class="form-control" id="ContactName" name="ContactName" placeholder="Contact Person Name">
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
-		    <label for="email">Email address</label>
-		    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+		    <label for="Email">Email address</label>
+		    <input type="email" class="form-control" name="Email" id="Email" placeholder="name@example.com">
 		  </div>
 	  	</div>
 	  	<div class="form-row mb-3">
 	  		
 		    <label for="Designation" class="col-form-label">Designation</label>
-		    <input type="text" class="form-control" id="Designation" placeholder="Designation">
+		    <input type="text" class="form-control" id="Designation" name="Designation" placeholder="Designation">
 		  
 	  	</div>
 	  	<div class="form-row">
 	  		<div class="form-group col-md-5">
 		    <label for="MobileNo" class="col-form-label">Mobile Number</label>
-		    <input type="text" class="form-control" id="MobileNo" placeholder="Ex - 9876543210" maxlength="10">
+		    <input type="text" class="form-control" id="MobileNo" name="MobileNo" placeholder="Ex - 9876543210" maxlength="10">
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
 		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" id="phoneNo" placeholder="Ex - 012 345789">
+		    <input type="text" class="form-control" id="phoneNo" name="phoneNo" maxlength="10" placeholder="Ex - 012 345789">
 		  </div>
 	  	</div>
 
@@ -162,7 +134,7 @@ input[readonly] {
 		    <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-4 col-form-label"><h5>About Your Company -</h5></label>
 		      <div class="col-sm-8">
-		         <textarea class="form-control" name="postContent" rows="8" id="AboutCompany"></textarea>
+		         <textarea class="form-control"  rows="8" name="AboutCompany" id="AboutCompany"></textarea>
 		      </div>
 		    </div>
 
@@ -175,46 +147,46 @@ input[readonly] {
 		    <div class="form-group row">
 		    	<label for="Roles" class="col-sm-1 col-form-label">1.</label>
 		   	  <div class="col-sm-9">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="d1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="dn1" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
 		    	<label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		   	  <div class="col-sm-9">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="d2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="dn2" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
 		    	<label for="Roles" class="col-sm-1 col-form-label">3.</label>
 		   	  <div class="col-sm-9">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="d3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="dn3" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
 		    	<label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		   	  <div class="col-sm-9">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="d4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="dn4" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
 		    	<label for="Roles" class="col-sm-1 col-form-label">5.</label>
 		   	  <div class="col-sm-9">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="d5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" name="dn5" placeholder="">
 		      </div>
 		    </div>
 
@@ -226,19 +198,19 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-2">
 		      	<label for="TotalCities" class="col-form-label">In Total Number</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - 5">
+		        <input type="text" class="form-control" id="TotalCities" name="TotalCities" placeholder="Ex - 5">
 		      </div>
 		      <div class="col-sm-6">
-		      	<label for="TotalCities" class="col-form-label">Places</label>
-		        <input type="text" class="form-control" id="TotalCities" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
+		      	<label for="Places" class="col-form-label">Places</label>
+		        <input type="text" class="form-control" id="Places" name="Places" placeholder="Ex - Delhi, Banglore, Mumbai, Nagpur">
 		      </div>
 		    </div>
 		    <div class="form-group row mt-3">
 		       <div class="col-sm-4">
-		        <label for="inputEmail3" class="col-form-label"><h5>GSTIN (Optional) : </h5></label>
+		        <label for="GSTIIN" class="col-form-label"><h5>GSTIN (Optional) : </h5></label>
 		      </div>
 		      <div class="col-sm-8">
-		        <input type="text" class="form-control" id="TotalCities" placeholder="22AA000AAAAA1Z5">
+		        <input type="text" class="form-control" id="GSTIN" name="GSTIN" placeholder="22AA000AAAAA1Z5" maxlength="15" >
 		      </div>
 		    </div>
 
@@ -248,33 +220,12 @@ input[readonly] {
 
 
 
-	  <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
+	  <button type="submit" name="submit" class="btn btn-info btn-lg mb-5 mt-5" >Submit</button>
 </form>
 	</div>
 
 
 	<script>
-$(document).on('change', '.btn-file :file', function() {
-  var input = $(this),
-      numFiles = input.get(0).files ? input.get(0).files.length : 1,
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-  input.trigger('fileselect', [numFiles, label]);
-});
-
-$(document).ready( function() {
-    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-        
-        var input = $(this).parents('.input-group').find(':text'),
-            log = numFiles > 1 ? numFiles + ' files selected' : label;
-        
-        if( input.length ) {
-            input.val(log);
-        } else {
-            if( log ) alert(log);
-        }
-        
-    });
-});
 
 function showHint(str) {
     if (str.length == 0) { 

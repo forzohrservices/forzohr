@@ -164,7 +164,7 @@
 		//----------------------------------------------------------
 
 
-			//Apostophes removal
+			//apostrophe removal
 
 		$name = str_replace("'","''", $name);
 		$address = str_replace("'","''", $address);
