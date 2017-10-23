@@ -218,6 +218,35 @@
 
 
 			//apostrophe removal
+	$name = str_replace("'","''", $name);
+	$email = str_replace("'","''", $email);
+	$Address = str_replace("'","''", $Address);
+	$State = str_replace("'","''", $State);
+	$City = str_replace("'","''", $City);
+	$Pincode = str_replace("'","''", $Pincode);
+	$CurrentCompany = str_replace("'","''", $CurrentCompany);
+	$Position = str_replace("'","''", $Position);
+	$Sector = str_replace("'","''", $Sector);
+	$Industry = str_replace("'","''", $Industry);
+	$Qualification = str_replace("'","''", $Qualification);
+	$Course = str_replace("'","''", $Course);
+	$bio = str_replace("'","''", $bio);
+	$workExp = str_replace("'","''", $workExp);
+	$skill = str_replace("'","''", $skill);
+	$proj1 = str_replace("'","''", $proj1);
+	$proj2 = str_replace("'","''", $proj2);
+	$certifications = str_replace("'","''", $certifications);
+	$expertCategory = str_replace("'","''", $expertCategory);
+	$consulting = str_replace("'","''", $consulting);
+	$Industries = str_replace("'","''", $Industries);
+	$expertise = str_replace("'","''", $expertise);
+	$functionalArea = str_replace("'","''", $functionalArea);
+	$proj_type = str_replace("'","''", $proj_type);
+	$noExecutedPro = str_replace("'","''", $noExecutedPro);
+	$executedProject = str_replace("'","''", $executedProject);
+	$liveProject = str_replace("'","''", $liveProject);
+	$teamDetails = str_replace("'","''", $teamDetails);
+	$locationService = str_replace("'","''", $locationService);
 
 
 //----------------------------------------------------------

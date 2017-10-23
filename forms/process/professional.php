@@ -204,10 +204,26 @@
 				$cvUrl = " ";
 			}
 					
-			//----------------------------------------------------------
+//----------------------------------------------------------
 
 
 			//apostrophe removal
+
+
+	$name = str_replace("'","''", $name);
+	$Address = str_replace("'","''", $Address);
+	$State = str_replace("'","''", $State);
+	$City = str_replace("'","''", $City);
+	$Qualification = str_replace("'","''", $Qualification);
+	$Course = str_replace("'","''", $Course);
+	$bio = str_replace("'","''", $bio);
+	$consultcharge = str_replace("'","''", $consultcharge);
+	$expertise = str_replace("'","''", $expertise);
+	$services = str_replace("'","''", $services);
+	$teamDetails = str_replace("'","''", $teamDetails);
+	$locationService = str_replace("'","''", $locationService);
+
+
 
 
 //----------------------------------------------------------

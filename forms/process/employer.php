@@ -60,23 +60,18 @@
 		//apostrophe removal
 
 	$CompanyName = str_replace("'","''", $CompanyName);
-	//$FoundedYear = str_replace("'","''", $FoundedYear);
-	//$NoOfEmployee = str_replace("'","''", $NoOfEmployee);
 	$Sector = str_replace("'","''", $Sector);
 	$Industry = str_replace("'","''", $Industry);
 	$Address = str_replace("'","''", $Address);
 	$State = str_replace("'","''", $State);
 	$City = str_replace("'","''", $City);
-	//$Pincode = str_replace("'","''", $Pincode);
 	$ContactName = str_replace("'","''", $ContactName);
 	$Email = str_replace("'","''", $Email);
 	$Designation = str_replace("'","''", $Designation);
-	//$MobileNo = str_replace("'","''", $MobileNo);
-	//$phoneNo = str_replace("'","''", $phoneNo);
 	$AboutCompany =str_replace("'","''", $AboutCompany);
 	$Division = str_replace("'","''", $Division);
 	$Office = str_replace("'","''", $Office);
-	//$GSTIN = str_replace("'","''", $GSTIN);
+
 
 	
 

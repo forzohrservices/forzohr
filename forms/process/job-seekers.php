@@ -298,6 +298,56 @@
 
             //apostrophe removal
 
+    $name = str_replace("'","''", $name);
+    $Address = str_replace("'","''", $Address);
+    $State = str_replace("'","''", $State);
+    $City = str_replace("'","''", $City);
+    $q1 = str_replace("'","''", $q1);
+    $c1 = str_replace("'","''", $c1);
+    $py1 = str_replace("'","''", $py1);
+    $p1 = str_replace("'","''", $p1);
+    $b1 = str_replace("'","''", $b1);
+    $q2 = str_replace("'","''", $q2);
+    $c2 = str_replace("'","''", $c2);
+    $py2 = str_replace("'","''", $py2);
+    $p2 = str_replace("'","''", $p2);
+    $b2 = str_replace("'","''", $b2);
+    $q3 = str_replace("'","''", $q3);
+    $c3 = str_replace("'","''", $c3);
+    $py3 = str_replace("'","''", $py3);
+    $p3 = str_replace("'","''", $p3);
+    $b3 = str_replace("'","''", $b3);
+    $q4 = str_replace("'","''", $q4);
+    $c4 = str_replace("'","''", $c4);
+    $py4 = str_replace("'","''", $py4);
+    $p4 = str_replace("'","''", $p4);
+    $b4 = str_replace("'","''", $b4);
+    $curricular = str_replace("'","''", $curricular);
+    $itskill = str_replace("'","''", $itskill);
+    $lang = str_replace("'","''", $lang);
+    $Lcom_name = str_replace("'","''", $Lcom_name);
+    $Ljob_title = str_replace("'","''", $Ljob_title);
+    $Lrole = str_replace("'","''", $Lrole);
+    $Ldept = str_replace("'","''", $Ldept);
+    $Lindustry = str_replace("'","''", $Lindustry);
+    $Lsector = str_replace("'","''", $Lsector);
+    $Ljob_detail = str_replace("'","''", $Ljob_detail);
+    $Pcom_name = str_replace("'","''", $Pcom_name);
+    $Pjob_title = str_replace("'","''", $Pjob_title);
+    $Prole = str_replace("'","''", $Prole);
+    $Pdept = str_replace("'","''", $Pdept);
+    $Pindustry = str_replace("'","''", $Pindustry);
+    $Psector = str_replace("'","''", $Psector);
+    $Pjob_details = str_replace("'","''", $Pjob_details);
+    $W_role = str_replace("'","''", $W_role);
+    $W_dept = str_replace("'","''", $W_dept);
+    $W_industry = str_replace("'","''", $W_industry);
+    $W_sector =  str_replace("'","''", $W_sector);
+    $W_rel_skill = str_replace("'","''", $W_rel_skill);
+    $W_location = str_replace("'","''", $W_location);
+
+
+
 
 //----------------------------------------------------------
 
@@ -344,7 +394,7 @@
                         </div>
                     </div>
                 ';
-                  echo "Error: " . $query . "<br>" . $conn->error;
+                  //echo "Error: " . $query . "<br>" . $conn->error;
 
                
             }
