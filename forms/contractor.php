@@ -723,7 +723,7 @@ $error="";
 		     </div>
 		 </div>
 
-		 		 <div class="row mt-3">
+		 <div class="row mt-3">
 		       <div class="col-sm-4">
 		        <label for="inputEmail3" class="col-form-label"><h5>Upload Photograph - </h5></label>
 		      </div>

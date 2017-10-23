@@ -1,38 +1,12 @@
 <?php
 	include'routes.php';
 	include'header.php';
+	include'process/job-seekers.php';
 
 ?>
 
 <title>4zoHr - Job Seeker's Registration Form</title>
-<style type="text/css">
 
-
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-.btn-file input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 100px;
-  text-align: right;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  background: red;
-  cursor: inherit;
-  display: block;
-}
-input[readonly] {
-  background-color: white !important;
-  cursor: text !important;
-}
-
-</style>
 <body>
 
 
@@ -40,15 +14,15 @@ input[readonly] {
 	<div class="container">
 		<h4 class="display-4 mt-5">JOB SEEKER'S REGISTRATION FORM</h4>
 	<hr>
-		<form class="mt-3">
+		<form class="mt-3" enctype="multipart/form-data" method="post">
 			<h4 class="my-2" > Personal Information : </h4>
 	  <div class="form-row">
 	  	<div class="form-group col-md-2">
 	  		<label for="title" class="col-form-label">Title</label>
-	  		  <select class="custom-select d-block my-0" required>
-			    <option value="1">Mr.</option>
-			    <option value="2">Ms.</option>
-			    <option value="3">Mrs.</option>
+	  		  <select class="custom-select d-block my-0" required name="title">
+			    <option value="Mr.">Mr.</option>
+			    <option value="Ms.">Ms.</option>
+			    <option value="Mrs.">Mrs.</option>
 			  </select>
 	  	</div>
 	    <div class="form-group col-md-3">
@@ -68,18 +42,18 @@ input[readonly] {
 	  	<div class="form-group col-md-2">
 	  	<label for="gender" class="col-form-label">Gender</label>
 	  		<select class="custom-select d-block my-0" name="gender" required>
-			    <option value="1">Male</option>
-			    <option value="2">Female</option>
+			    <option value="Male">Male</option>
+			    <option value="Female">Female</option>
 			</select>
 		</div>
 		<div class="form-group col-md-2">
 	  	<label for="MaritialStatus" class="col-form-label">Maritial Status</label>
-	  		<select class="custom-select d-block my-0" name="marry" required>
-			    <option value="1">Single</option>
-			    <option value="2">Maried</option>
-			    <option value="2">Divorced</option>
-			    <option value="2">Widowed</option>
-			    <option value="2">Separated</option>
+	  		<select class="custom-select d-block my-0" name="status" required>
+			    <option value="Single">Single</option>
+			    <option value="Maried">Maried</option>
+			    <option value="Divorced">Divorced</option>
+			    <option value="Widowed">Widowed</option>
+			    <option value="Separated">Separated</option>    
 			</select>
 		</div>
 		<div class="form-group col-md-4">
@@ -105,7 +79,7 @@ input[readonly] {
 		  </div>
 		  <div class="form-group col-md-5 ml-auto">
 		  	<label for="phoneNo" class="col-form-label">Phone Number (with pincode)</label>
-		    <input type="email" class="form-control" name="phone" placeholder="Ex - 012 345789" maxlength="6">
+		    <input type="text" class="form-control" name="phone" placeholder="Ex - 012 345789" maxlength="10">
 		  </div>
 	  	</div>
 
@@ -143,7 +117,7 @@ input[readonly] {
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">1. Qualification</label>
 		      <select name="q1" class="form-control">
-		      	<option value="1">Less than 10th</option>
+		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
 			    <option value="Diploma">Diploma</option>
@@ -175,7 +149,7 @@ input[readonly] {
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">2. Qualification</label>
 		      <select name="q2" class="form-control">
-		      	<option value="1">Less than 10th</option>
+		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
 			    <option value="Diploma">Diploma</option>
@@ -207,7 +181,7 @@ input[readonly] {
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">3. Qualification</label>
 		      <select name="q3" class="form-control">
-		      	<option value="1">Less than 10th</option>
+		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
 			    <option value="Diploma">Diploma</option>
@@ -239,7 +213,7 @@ input[readonly] {
 		    <div class="form-group col-md-5">
 		      <label for="Qualification" class="col-form-label">4. Qualification</label>
 		      <select name="q4" class="form-control">
-		      	<option value="1">Less than 10th</option>
+		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
 			    <option value="Diploma">Diploma</option>
@@ -274,7 +248,7 @@ input[readonly] {
 	 	 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-4 col-form-label"><h5>Co-Curriculum Activities -</h5></label>
 		      <div class="col-sm-8">
-		       	<input type="text" class="form-control" name="cocurricular" placeholder="Ex - Leadership projects, Workshops, Seminars ">
+		       	<input type="text" class="form-control" name="curricular" placeholder="Ex - Leadership projects, Workshops, Seminars ">
 		      </div>
 		 </div>
 
@@ -298,7 +272,7 @@ input[readonly] {
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Fresher -</h5></label>
 		      <div class="col-sm-3">
 		         <label class="custom-control custom-checkbox mt-4">
-				  <input type="checkbox" class="custom-control-input">
+				  <input type="checkbox" name="fresher" value="yes" class="custom-control-input">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">Are You Fresher ?</span>
 				</label>
@@ -310,11 +284,11 @@ input[readonly] {
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Total work Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" name="year" placeholder="Year" maxlength="4">
+		       	<input type="text" class="form-control" name="Expyear" placeholder="Year" maxlength="4">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Months</label>
-		       	<input type="text" class="form-control" name="month" placeholder="Months" maxlength="2">
+		       	<input type="text" class="form-control" name="Expmonth" placeholder="Months" maxlength="2">
 		      </div>
 		 </div>
 
@@ -324,9 +298,9 @@ input[readonly] {
 		       	<input type="text" class="form-control" name="sal" placeholder="INR">
 		      </div>
 		      <div class="col-sm-4">
-		       	<select class="custom-select d-block my-0" required>
-				    <option value="1">Annual CTC</option>
-				    <option value="2">Monthly</option>
+		       	<select class="custom-select d-block my-0" name="cur_sal" required>
+				    <option value="Annual CTC">Annual CTC</option>
+				    <option value="Monthly">Monthly</option>
 			  	</select>
 		      </div>
 		 </div>
@@ -337,9 +311,9 @@ input[readonly] {
 		       	<input type="text" class="form-control" name="esal" placeholder="INR">
 		      </div>
 		      <div class="col-sm-4">
-		       	<select class="custom-select d-block my-0" required>
-				    <option value="1">Annual CTC</option>
-				    <option value="2">Monthly</option>
+		       	<select class="custom-select d-block my-0" required name="exp_sal">
+				    <option value="Annual CTC">Annual CTC</option>
+				    <option value="Monthly">Monthly</option>
 			  	</select>
 		      </div>
 		 </div>
@@ -349,38 +323,38 @@ input[readonly] {
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="CompanyName" class="col-form-label">Company Name</label>
-		       	<input type="text" class="form-control" name="cname" placeholder="Company Name">
+		       	<input type="text" class="form-control" name="Lcname" placeholder="Company Name">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="JobTitle" class="col-form-label">Job Title</label>
-		       	<input type="text" class="form-control" name="job" placeholder="Job Title">
+		       	<input type="text" class="form-control" name="Ljob" placeholder="Job Title">
 		 	</div>
 		 </div>
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="Role" class="col-form-label">Your Role/Designation</label>
-		       	<input type="text" class="form-control" name="role" placeholder="Your Role/Designation">
+		       	<input type="text" class="form-control" name="Lrole" placeholder="Your Role/Designation">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Div" class="col-form-label">Div/Department</label>
-		       	<input type="text" class="form-control" name="div" placeholder="Div/Department">
+		       	<input type="text" class="form-control" name="Ldiv" placeholder="Div/Department">
 		 	</div>
 		 </div>
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="Industry" class="col-form-label">Industry</label>
-		       	<input type="text" class="form-control" name="industry" placeholder="Ex - Forging, Foundry, Steel.. etc">
+		       	<input type="text" class="form-control" name="Lindustry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Sector" class="col-form-label">Sector</label>
-		       	<input type="text" class="form-control" name="sector" placeholder="" onkeyup="showHint(this.value)">
+		       	<input type="text" class="form-control" name="Lsector" placeholder="" onkeyup="showHint(this.value)">
 	  			<span id="txtHint"></span>
 		 	</div>
 		 </div>
 		 <div class="form-group row mt-3">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Job Details -</h5></label>
 		      <div class="col-sm-9">
-		         <textarea class="form-control" name="postContent" rows="3" name="jobdetail"></textarea>
+		         <textarea class="form-control" rows="3" name="Ljobdetail"></textarea>
 		      </div>
 		 </div>
 		 <div class="form-group row mt-3">
@@ -388,7 +362,7 @@ input[readonly] {
 		    	<div class="well">
 			      <div class="form-group">
 				      <label>From</label>
-				      <input type="date" class="form-control" name="from" placeholder="Date of Birth">
+				      <input type="date" class="form-control" name="Lfrom" placeholder="">
 			      </div>
 			</div>
 			<div class="well">
@@ -399,7 +373,7 @@ input[readonly] {
 		      	<div class="well">
 			      <div class="form-group">
 				      <label>To</label>
-				      <input type="date" class="form-control" name="toCurrent" placeholder="Date of Birth">
+				      <input type="date" class="form-control" name="LtoCurrent" placeholder="Date of Birth">
 			      </div>
 			</div>
 			<div class="well">
@@ -413,37 +387,37 @@ input[readonly] {
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="CompanyName" class="col-form-label">Company Name</label>
-		       	<input type="text" class="form-control" name="cname2" placeholder="Company Name">
+		       	<input type="text" class="form-control" name="Pcname" placeholder="Company Name">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="JobTitle" class="col-form-label">Job Title</label>
-		       	<input type="text" class="form-control" name="job2" placeholder="Job Title">
+		       	<input type="text" class="form-control" name="Pjob" placeholder="Job Title">
 		 	</div>
 		 </div>
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="Role" class="col-form-label">Your Role/Designation</label>
-		       	<input type="text" class="form-control" name="role2" placeholder="Your Role/Designation">
+		       	<input type="text" class="form-control" name="Prole" placeholder="Your Role/Designation">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Div" class="col-form-label">Div/Department</label>
-		       	<input type="text" class="form-control" name="div2" placeholder="Div/Department">
+		       	<input type="text" class="form-control" name="Pdiv" placeholder="Div/Department">
 		 	</div>
 		 </div>
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="Industry" class="col-form-label">Industry</label>
-		       	<input type="text" class="form-control" name="industry2" placeholder="Ex - Forging, Foundry, Steel.. etc">
+		       	<input type="text" class="form-control" name="Pindustry" placeholder="Ex - Forging, Foundry, Steel.. etc">
 		 	</div>
 		 	<div class="col-md-6">
 		 		<label for="Sector" class="col-form-label">Sector</label>
-		       	<input type="text" class="form-control" name="sector2" placeholder="Sector">
+		       	<input type="text" class="form-control" name="Psector" placeholder="Sector">
 		 	</div>
 		 </div>
 		 <div class="form-group row mt-3">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Job Details -</h5></label>
 		      <div class="col-sm-9">
-		         <textarea class="form-control" name="postContent" rows="3" name="jobdetail2"></textarea>
+		         <textarea class="form-control" name="Pjobdetails" rows="3"></textarea>
 		      </div>
 		 </div>
 		 <div class="form-group row mt-3">
@@ -451,7 +425,7 @@ input[readonly] {
 		    	<div class="well">
 			      <div class="form-group">
 				      <label>From</label>
-				      <input type="date" class="form-control" name="from2" placeholder="Date of Birth">
+				      <input type="date" class="form-control" name="Pfrom" placeholder="Date of Birth">
 			      </div>
 			</div>
 			<div class="well">
@@ -462,7 +436,7 @@ input[readonly] {
 		      	<div class="well">
 			      <div class="form-group">
 				      <label>To</label>
-				      <input type="date" class="form-control" name="to2" placeholder="Date of Birth">
+				      <input type="date" class="form-control" name="Ptocurrent" placeholder="Date of Birth">
 			      </div>
 			</div>
 			<div class="well">
@@ -475,32 +449,32 @@ input[readonly] {
 		 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Job Type -</h5></label>
 		      <label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="jobtype[]">
+			  <input type="checkbox" class="custom-control-input" name="jobtype[]" value="Full Time">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Full Time</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="jobtype[]">
+			  <input type="checkbox" class="custom-control-input" name="jobtype[]" value="Part Time">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Part Time</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="jobtype[]">
+			  <input type="checkbox" class="custom-control-input" name="jobtype[]" value="Permanent">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Permanent</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="jobtype[]">
+			  <input type="checkbox" class="custom-control-input" name="jobtype[]" value="Temporary">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Temporary</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="jobtype[]">
+			  <input type="checkbox" class="custom-control-input" name="jobtype[]" value="Contract">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Contract</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="jobtype[]">
+			  <input type="checkbox" class="custom-control-input" name="jobtype[]" value="Pay Roll">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Pay Roll</span>
 			</label>
@@ -508,32 +482,32 @@ input[readonly] {
 		 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Shift Time -</h5></label>
 		      <label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="shift[]">
+			  <input type="checkbox" class="custom-control-input" name="shift[]" value="Regular">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Regular</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="shift[]">
+			  <input type="checkbox" class="custom-control-input" name="shift[]" value="Morning">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Morning</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="shift[]">
+			  <input type="checkbox" class="custom-control-input" name="shift[]" value="Afternoon">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Afternoon</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="shift[]">
+			  <input type="checkbox" class="custom-control-input" name="shift[]" value="Evening">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Evening</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="shift[]">
+			  <input type="checkbox" class="custom-control-input" name="shift[]" value="Night">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Night</span>
 			</label>
 			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="shift[]">
+			  <input type="checkbox" class="custom-control-input" name="shift[]" value="Any">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Any</span>
 			</label>
@@ -542,42 +516,42 @@ input[readonly] {
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Role /Designation -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" name="role" placeholder="Ex. - Operator, Executive, Design Engineer etc">
+		       	<input type="text" class="form-control" name="W_role" placeholder="Ex. - Operator, Executive, Design Engineer etc">
 		      </div>
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Div./Department -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" name="dept" placeholder="Ex. - Maintenance,Project, Marketing, R&D etc.">
+		       	<input type="text" class="form-control" name="W_dept" placeholder="Ex. - Maintenance,Project, Marketing, R&D etc.">
 		      </div>
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Industry -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" name="indus" placeholder="Ex. - Forging, Automative, Steel, Foundry">
+		       	<input type="text" class="form-control" name="W_industry" placeholder="Ex. - Forging, Automative, Steel, Foundry">
 		      </div>
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Sector -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" name="sect" placeholder="Ex. - Iron or Steel">
+		       	<input type="text" class="form-control" name="W_sector" placeholder="Ex. - Iron or Steel">
 		      </div>
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Relevant Skills -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" name="rel_skill" placeholder="Ex. - Quality Assurance, Sales, ">
+		       	<input type="text" class="form-control" name="W_rel_skill" placeholder="Ex. - Quality Assurance, Sales, ">
 		      </div>
 		 </div>
 
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Preferred Location -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" name="location" placeholder="Ex. - Delhi, Mumbai, Nagpur, Pune">
+		       	<input type="text" class="form-control" name="W_location" placeholder="Ex. - Delhi, Mumbai, Nagpur, Pune">
 		      </div>
 		 </div>
 
@@ -588,12 +562,12 @@ input[readonly] {
 		     <div class="col-md-6">
 		     	<label for="AboutCompany" class="col-sm-6 col-form-label"><h5>Pancard -</h5></label>
 			      <label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="pan[]">
+				  <input type="radio" class="custom-control-input" name="pan" value="yes">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">Yes</span>
 				</label>
 				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="pan[]">
+				  <input type="radio" class="custom-control-input" name="pan" value="no">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">No</span>
 				</label>
@@ -601,12 +575,12 @@ input[readonly] {
 		     <div class="col-md-6">
 		     	<label for="AboutCompany" class="col-sm-6 col-form-label"><h5>Driving License -</h5></label>
 			      <label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="drive[]">
+				  <input type="radio" class="custom-control-input" name="drive" value="yes">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">Yes</span>
 				</label>
 				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="drive[]">
+				  <input type="radio" class="custom-control-input" name="drive" value="no">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">No</span>
 				</label>
@@ -617,12 +591,12 @@ input[readonly] {
 		      <div class="col-md-6">
 		      	<label for="AboutCompany" class="col-sm-6 col-form-label"><h5>Voter ID -</h5></label>
 			      <label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="voter[]">
+				  <input type="radio" class="custom-control-input" name="voter" value="yes">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">Yes</span>
 				</label>
 				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="voter[]">
+				  <input type="radio" class="custom-control-input" name="voter" value="no">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">No</span>
 				</label>
@@ -630,12 +604,12 @@ input[readonly] {
 		      <div class="col-md-6">
 		      	<label for="AboutCompany" class="col-sm-6 col-form-label"><h5>Passport -</h5></label>
 			      <label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="passport[]">
+				  <input type="radio" class="custom-control-input" name="passport" value="yes">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">Yes</span>
 				</label>
 				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" name="passport[]">
+				  <input type="radio" class="custom-control-input" name="passport" value="no">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">No</span>
 				</label>
@@ -648,50 +622,38 @@ input[readonly] {
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <span class="input-group-btn">
-                    <span class="btn btn-secondary btn-file">
-                        Browse&hellip; <input type="file" single>
-                    </span>
-                </span>
-                <input type="text" class="form-control" readonly>
+                
+                <input type="file" accept="image/png, image/jpeg, image/gif" placeholder="Images only jpeg"  name="photoUpload"/>
+                
             </div>
 		      </div>
-
+		      
 		 </div>
 
 		 <div class="row mt-3">
 		       <div class="col-sm-4">
-		        <label for="inputEmail3" class="col-form-label"><h5>Upload CV - </h5></label>
+		        <label for="inputEmail3" class="col-form-label"><h5>Upload Aadhaar Card - </h5></label>
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <span class="input-group-btn">
-                    <span class="btn btn-secondary btn-file">
-                        Browse&hellip; <input type="file" single>
-                    </span>
-                </span>
-                <input type="text" class="form-control" readonly>
+                <input type="file" accept="image/png, image/jpeg, image/gif" placeholder="Images only jpeg"  name="aadhaarUpload"/>
             </div>
 		      </div>
-
+		      
 		 </div>
 
 		 <div class="row mt-3">
 		       <div class="col-sm-4">
-		        <label for="inputEmail3" class="col-form-label"><h5>Upload Adhar Card - </h5></label>
+		        <label for="cvUpload" class="col-form-label"><h5>Upload CV/Resume - </h5></label>
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <span class="input-group-btn">
-                    <span class="btn btn-secondary btn-file">
-                        Browse&hellip; <input type="file" single>
-                    </span>
-                </span>
-                <input type="text" class="form-control" readonly>
+                <input type="file" accept="application/docx, application/doc, application/rtf, application/pdf" placeholder="doc, docx, rtf and pdf only"  name="cvUpload"/>
             </div>
 		      </div>
-
+		      
 		 </div>
+
 
 		 <hr>
 
@@ -700,7 +662,7 @@ input[readonly] {
 
 		 <div class="form-row">
 	 	 	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="certify">
+			  <input type="checkbox" class="custom-control-input" name="disclaimer" value="I certify that my answers are true and complete to the best of my knowledge.">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">I certify that my answers are true and complete to the best of my knowledge.</span>
 			</label>
@@ -708,39 +670,19 @@ input[readonly] {
 
 	 	<div class="form-row">
 	 	 	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="certify1">
+			  <input type="checkbox" class="custom-control-input" name="disclaimer" value="If the application leads to employment, I understand that false or misleading information in my application or interview may
+				result in my release.">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">If the application leads to employment, I understand that false or misleading information in my application or interview may
 				result in my release.</span>
 			</label>
 	 	</div>
 
-	 	  <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
+	 	  <button type="submit" name="submit" class="btn btn-info btn-lg mb-5 mt-5" >Submit</button>
 	</form>
 </div>
 
 	<script>
-$(document).on('change', '.btn-file :file', function() {
-  var input = $(this),
-      numFiles = input.get(0).files ? input.get(0).files.length : 1,
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-  input.trigger('fileselect', [numFiles, label]);
-});
-
-$(document).ready( function() {
-    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-
-        var input = $(this).parents('.input-group').find(':text'),
-            log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-        if( input.length ) {
-            input.val(log);
-        } else {
-            if( log ) alert(log);
-        }
-
-    });
-});
 
 function showHint(str) {
     if (str.length == 0) {
