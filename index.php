@@ -1,7 +1,8 @@
 <html>
   <head>
     <title>ForzoHR | India's 1st common HR Platform</title>
-
+    <meta name="description" content="India's 1st common HR Platform" />
+    <meta name="keywords" content="job, hr, india, forzo hr, hr services" />
     <!-- Normalize HTML5 Reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis:600" rel="stylesheet">
@@ -29,7 +30,7 @@
             <li><a href="#section4">services</a></li>
             <li><a href="#section5">Solutions</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><span class="emp"><a href=login.html"">Employer Zone</a></span></li>
+            <li><span class="emp"><a href="login.html">Employer Zone</a></span></li>
 
           </ul>
       </div>
