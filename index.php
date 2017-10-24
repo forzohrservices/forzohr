@@ -291,7 +291,7 @@ basis of their work experience and offerings, Forzo HR services as on mutual con
             Forzo HR Services Pvt. Ltd. <br/>
             201, SHKN, Porwal Road, Pune-411047 Maharashtra
 
-            <p class="con-info">  <a href="info@forzohr.com" class="gg">info@forzohr.com</a> | +91-9130047247 | <a href="info@forzohr.com" class="gg">forzohr@gmail.com</a> </p>
+            <p class="con-info">  <a href="mailto:info@forzohr.com" class="gg">info@forzohr.com</a> | +91-9130047247 | <a href="mailto:forzohr@gmail.com" class="gg">forzohr@gmail.com</a> </p>
           </div>
           <div class="dividing">
           </div>
