@@ -1,3 +1,49 @@
+<?php
+    $error = ""; $successMessage = "";
+    if(isset($_POST['submit']))
+    {
+            if(!$_POST["name"]){
+                $error .= "Enter full name.<br>";
+            }
+            if(!$_POST["email"]){
+                $error .= "An email address is required.<br>";
+            }
+            if(!$_POST["mobile"]){
+                $error .= "The content Mobile Number is required.<br>";
+            }
+            if(!$_POST["message"]){
+                $error .= "The Message is required.<br>";
+            }
+            if($_POST["email"] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {
+              $error .= "Invalid email format.<br>";
+                }
+            if($error != "")
+                {
+                        $error = '<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' . $error . '</div>';
+                }
+                else  {
+                    $name= $_POST['name'];
+                    $emailTo = "amitraj.1996@gmail.com"; //Info@forzohr.com
+                    $message = $_POST['message'];
+                    //$content = "<strong>Name:</strong>" .($_POST['inputFname']). ($_POST['inputLname']);
+                    //$content = $_POST['content'];
+
+                    $content = "Name :".$name."\n \n Mobile Number :".$_POST['mobile']."\n \n Message :".$_POST['message']."\n \n Email :".$_POST['email'];
+                    $headers ="From: ".$_POST['email'];//.'<'.$_POST['inputFname'].$_POST['inputLname'];
+                    if(mail($emailTo, $name, $content, $headers)) {
+                        $successMessage = '<div class="alert alert-success" role="alert">
+                            We\'ll get back to you ASAP!
+                            </div>';
+                        }
+                    else
+                    {
+                        $error = '<div class="alert alert-danger" role="alert"><p><strong>Your message couldn\'t be sent - please try again later </strong></p></div>';
+                    }
+                    //echo $inputFname." ".$inputLname." ".$subject." ".$headers." ".$content;
+                }
+    }
+ ?>
+
 <html>
   <head>
     <title>ForzoHR | India's 1st common HR Platform</title>
@@ -236,23 +282,26 @@ basis of their work experience and offerings, Forzo HR services as on mutual con
         </div>
 
         <div class="container">
-  <div class="heading">
-    <h1>Reach out to Us!</h1>
-  </div>
-  <div class='name'>
-    <input class='first' placeholder='Name' type='text'>
-    <input class='last' placeholder='Mobile Number' type='text'>
-  </div>
-  <div class='contact'>
-    <input class='email' placeholder='E-mail Address' type='text'>
-  </div>
-  <div class='message'>
-    <textarea placeholder='Your message!'></textarea>
-  </div>
-  <div class="end">
-    <button>Submit</button>
-  </div>
-</div>
+          <form method="post">
+            <div class="heading">
+              <h1>Reach out to Us!</h1>
+            </div>
+            <div class='name'>
+              <input class='first' name="name" placeholder='Name' type='text'>
+              <input class='last' name="mobile" placeholder='Mobile Number' type='text'>
+            </div>
+            <div class='contact'>
+              <input class='email' name="email" placeholder='E-mail Address' type='text'>
+            </div>
+            <div class='message'>
+              <textarea name="message" placeholder='Your message!'></textarea>
+            </div>
+            <div class="end">
+              <button type="submit" name="submit">Submit</button>
+            </div>
+          </form>
+          <div id="error"><?php echo $error.$successMessage; ?></div>
+        </div>
 
 
     </div>
@@ -306,5 +355,30 @@ basis of their work experience and offerings, Forzo HR services as on mutual con
     <!-- global.js Link -->
     <script src="js/functions.js"></script>
     <script src="js/scroll.js"></script>
+
+    <script type="text/javascript">
+          $("form").submit(function (e) {
+              var error = "";
+            if ($("#name").val() == ""){
+                error += "Name required.<br>";
+            }
+            if ($("#email").val() == ""){
+                error += "The email address required.<br>";
+            }
+            if ($("#mobile").val() == ""){
+                error += "The Contact Number is required.<br>";
+            }
+            if ($("#message").val() == ""){
+                error += "The Message required.";
+            }
+            if(error != "") {
+              $("#error").html('<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
+              return false;
+            }
+            else {
+              return true;
+            }
+            });
+    </script>
   </body>
 </html>
