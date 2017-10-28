@@ -368,7 +368,8 @@
 	</div>
 
 
-	<script>
+<?php
+	include'footer.php';
+?>
 
-</script>
 </body>

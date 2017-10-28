@@ -1,0 +1,57 @@
+.logo {
+  display: inline-block;;
+  width:180px;
+  height:56px;
+  background-image:url("../img/logo.png");
+  background-size: cover;
+  repeat:no-repeat;
+  float:left;
+}
+
+
+#wrap {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.nav {
+  margin-top: 15px;
+  float:right;
+}
+
+.header{
+  padding-top:15px;
+}
+
+
+
+.nav ul li{
+  text-decoration: none;
+  list-style: none;
+  display:inline-block;
+  margin-right: 20px;
+  font-size: 16px;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  color: #8f8383;
+}
+
+.nav ul li a:hover{
+  color: #000;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: #8f8383;
+}
+
+
+
+.head {
+
+  width:70%;
+  line-height: 45px;
+  font-family: 'Playfair Display', serif;
+  font-size:40px;
+}

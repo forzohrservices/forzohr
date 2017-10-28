@@ -1,0 +1,82 @@
+
+#footer {
+  margin-top: 80px;
+  width:100%;
+  background-color:#009ddc;
+}
+
+.copy {
+  color:white;
+  padding-top:15px;
+  text-align:center;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 10px;
+
+}
+
+.dividing {
+  width: 80%;
+  height:1px;
+  background-color: white;
+}
+
+.foot-menu {
+  padding-top: 5%;
+}
+
+.social {
+  margin-top:3%;
+}
+
+.social ul li {
+  display:inline-block;
+  width:100px;
+
+}
+
+.ico {
+  width:35%;
+  opacity: 0.7;
+}
+
+.ico:hover {
+  opacity: 1;
+}
+
+
+.foot-menu ul li {
+  display:inline-block;
+  text-transform: uppercase;
+  padding-right:25px;
+  font-size: 15px;
+  font-family: 'Dosis', sans-serif;
+  color:#b2dcf2;
+}
+
+.foot-menu ul li a {
+  text-decoration: none;
+  color:#b2dcf2;
+}
+
+.gg {
+  text-decoration: none;
+  color:white;
+  border-bottom: 1px dashed white;
+}
+
+
+
+
+.foot-menu ul li a:hover {
+  color:white;
+}
+
+
+.add {
+    line-height: 22px;
+    color:white;
+    margin-top: 2%;
+    font-family: 'Lato', sans-serif;
+    flow-size: 14px;
+    margin-bottom: 2%;
+}

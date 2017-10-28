@@ -23,7 +23,7 @@
                 }
                 else  {
                     $name= $_POST['name'];
-                    $emailTo = "amitraj.1996@gmail.com"; //Info@forzohr.com
+                    $emailTo = "info@forzohr.com"; //Info@forzohr.com
                     $message = $_POST['message'];
                     //$content = "<strong>Name:</strong>" .($_POST['inputFname']). ($_POST['inputLname']);
                     //$content = $_POST['content'];
@@ -124,7 +124,7 @@
         <div class="divider">
         </div>
         <div class="sub-text">
-          Forzo HR is recognized as India&#39;s 1st unique platform providing a common market place for Recruitment &Recruitment Process Outsourcing (RPO), Manpower/Staff contract hiring, Common HR service, Industries Expert / Consultant /Contractor and Professionals for Local Service.
+          Forzo HR is recognized as India&#39;s 1st unique platform providing a common market place for Recruitment &amp;Recruitment Process Outsourcing (RPO), Manpower/Staff contract hiring, Common HR service, Industries Expert / Consultant /Contractor and Professionals for Local Service.
             <br/><br/>
               We help customers to hire trusted people for their entire requirement. Similarly, we help Industries Specialists and Professionals to connect directly with Employer / Client and their followers. We are passionate people working tirelessly to make a difference in the way of working life of people by catering multiple services for your needs.
         </div>

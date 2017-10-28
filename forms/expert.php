@@ -542,7 +542,11 @@
 
 	 	  <button type="submit" name="submit" class="btn btn-info btn-lg mb-5 mt-5" >Submit</button>
 	</form>
-</div>     
+</div>   
+<?php
+	include'footer.php';
+?>
+  
 	<script>
 
 function showHint(str) {
