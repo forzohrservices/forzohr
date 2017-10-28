@@ -133,7 +133,7 @@
 	 	 <div class="form-row">
 		    <div class="form-group col-md-4">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		       <input type="text" class="form-control" name="py1" placeholder="Ex - 2017">
+		       <input type="text" class="form-control" name="py1" maxlength="4" placeholder="Ex - 2017">
 		    </div>
 		    <div class="form-group col-md-4">
 		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
@@ -165,7 +165,7 @@
 	 	 <div class="form-row">
 		    <div class="form-group col-md-4">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		       <input type="text" class="form-control" name="py2" placeholder="Ex - 2017">
+		       <input type="text" class="form-control" name="py2" maxlength="4" placeholder="Ex - 2017">
 		    </div>
 		    <div class="form-group col-md-4">
 		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
@@ -197,7 +197,7 @@
 	 	 <div class="form-row">
 		    <div class="form-group col-md-4">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		       <input type="text" class="form-control" name="py3" placeholder="Ex - 2017">
+		       <input type="text" class="form-control" name="py3" maxlength="4" placeholder="Ex - 2017">
 		    </div>
 		    <div class="form-group col-md-4">
 		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
@@ -229,7 +229,7 @@
 	 	 <div class="form-row">
 		    <div class="form-group col-md-4">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		       <input type="text" class="form-control" name="py4" placeholder="Ex - 2017">
+		       <input type="text" class="form-control" name="py4" maxlength="4" placeholder="Ex - 2017">
 		    </div>
 		    <div class="form-group col-md-4">
 		      <label for="Percentage" class="col-form-label">Percentage or CGPA</label>
@@ -269,22 +269,22 @@
 		 <h4 class="mt-5">Experience details</h4>
 
 		 <div class="form-group row mt-2">
-		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Fresher -</h5></label>
+		      <label for="fresher" class="col-sm-3 col-form-label my-4"><h5>Fresher -</h5></label>
 		      <div class="col-sm-3">
 		         <label class="custom-control custom-checkbox mt-4">
-				  <input type="checkbox" name="fresher" value="yes" class="custom-control-input">
+				  <input type="checkbox" name="fresher" value="yes" id="fresher" class="custom-control-input">
 				  <span class="custom-control-indicator"></span>
 				  <span class="custom-control-description">Are You Fresher ?</span>
 				</label>
 		      </div>
 		 </div>
 
-
+		 <fieldset>
 		 <div class="form-group row">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Total work Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" name="Expyear" placeholder="Year" maxlength="4">
+		       	<input type="text" class="form-control" name="Expyear" placeholder="Year" maxlength="2">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Months</label>
@@ -383,7 +383,7 @@
 
 
 		 <h4 class="mt-4">Details of Previous work</h4>
-
+		 
 		 <div class="form-group row">
 		 	<div class="col-md-6">
 		 		<label for="CompanyName" class="col-form-label">Company Name</label>
@@ -443,6 +443,7 @@
 			</div>
 		      </div>
 		 </div>
+		 </fieldset>
 
 		 <h4>Work Prefrences</h4>
 
@@ -554,7 +555,7 @@
 		       	<input type="text" class="form-control" name="W_location" placeholder="Ex. - Delhi, Mumbai, Nagpur, Pune">
 		      </div>
 		 </div>
-
+		 
 		 <h4>Do You Have?</h4>
 
 		 <div class="form-group row mt-4">
@@ -681,6 +682,8 @@
 	 	  <button type="submit" name="submit" class="btn btn-info btn-lg mb-5 mt-5" >Submit</button>
 	</form>
 </div>
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
 	<script>
 
@@ -699,5 +702,18 @@ function showHint(str) {
         xmlhttp.send();
     }
 }
+
+$(document).ready(function(){
+  $('#fresher:checkbox').on('click', function(){
+      if($('#fresher:checkbox').is(':checked')){
+      	$('fieldset').prop('disabled', 'disabled');
+      	$('fieldset').val('');
+      }
+      else{
+      	$('fieldset').prop('disabled', false);
+      }
+  });
+});
+
 
 </script>

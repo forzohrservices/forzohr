@@ -138,10 +138,10 @@
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Professional Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" name="year" placeholder="Year" maxlength="4">
+		       	<input type="text" class="form-control" name="year" placeholder="Year" maxlength="2">
 		      </div>
 		      <div class="col-sm-3">
-		         <label for="Year" class="col-form-label">Months</label>
+		         <label for="month" class="col-form-label">Months</label>
 		       	<input type="text" class="form-control" name="month" placeholder="Months" maxlength="2">
 		      </div>
 		 </div>
@@ -242,7 +242,7 @@
 	  	<div class="form-group row mt-4">
 		      <label for="teamDetails" class="col-sm-5 col-form-label"><h5>Team details (if you have) (In total no.) -</h5></label>
 		      <div class="col-sm-4">
-		       	<input type="text" class="form-control col-sm-2" name="noTeam" placeholder="">
+		       	<input type="text" maxlength="5" class="form-control col-sm-2" name="noTeam" placeholder="">
 		      </div>
 		 </div>
 

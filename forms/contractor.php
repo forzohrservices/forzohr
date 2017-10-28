@@ -197,7 +197,7 @@ $error="";
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Professional Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="Year" class="col-form-label">Years</label>
-		       	<input type="text" class="form-control" name="year" placeholder="Year" maxlength="4">
+		       	<input type="text" class="form-control" name="year" placeholder="Year" maxlength="2">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="months" class="col-form-label">Months</label>
@@ -289,14 +289,14 @@ $error="";
 		        <input type="text" class="form-control" name="r1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n1" placeholder="">
+		        <input type="text" class="form-control" name="n1" maxlength="5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" name="r2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n2" placeholder="">
+		        <input type="text" class="form-control" name="n2" maxlength="5" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -305,14 +305,14 @@ $error="";
 		        <input type="text" class="form-control" name="r3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n3" placeholder="">
+		        <input type="text" class="form-control" name="n3" maxlength="5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" name="r4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n4" placeholder="">
+		        <input type="text" class="form-control" name="n4" maxlength="5" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -321,14 +321,14 @@ $error="";
 		        <input type="text" class="form-control" name="r5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n5" id="Number" placeholder="">
+		        <input type="text" class="form-control" name="n5" maxlength="5" id="Number" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">6.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" name="r6" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n6" placeholder="">
+		        <input type="text" class="form-control" name="n6 maxlength="5"" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -337,14 +337,14 @@ $error="";
 		        <input type="text" class="form-control" name="r7" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n7" placeholder="">
+		        <input type="text" class="form-control" name="n7" maxlength="5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">8.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" name="r8" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" name="n8" placeholder="">
+		        <input type="text" class="form-control" name="n8" maxlength="5" placeholder="">
 		      </div>
 		 </div>
 
@@ -365,14 +365,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="l1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln1" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="l2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln2" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln2" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -381,14 +381,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="l3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln3" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="l4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln4" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln4" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -397,14 +397,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="l5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln5" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">6.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="l6" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln6" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln6" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -413,14 +413,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="l7" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln7" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln7" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">8.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="l8" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="ln8" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="ln8" placeholder="">
 		      </div>
 		 </div>
 
@@ -441,14 +441,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="w1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn1" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="w2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn2" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn2" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -457,14 +457,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="w3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn3" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="w4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn4" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn4" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -473,14 +473,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="w5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn5" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">6.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="w6" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn6" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn6" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -489,14 +489,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="w7" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn7" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn7" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">8.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="w8" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="wn8" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="wn8" placeholder="">
 		      </div>
 		 </div>
 
@@ -516,14 +516,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="m1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn1" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
-		        <input type="text" class="form-control" id="Roles" name="m2" placeholder="">
+		        <input type="text" class="form-control" id="Roles" maxlength="5" name="m2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn2" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn2" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -532,14 +532,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="m3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn3" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="m4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn4" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn4" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -548,14 +548,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="m5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn5" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">6.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="m6" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn6" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn6" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -564,14 +564,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="m7" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn7" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn7" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">8.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="m8" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="mn8" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="5" name="mn8" placeholder="">
 		      </div>
 		 </div>
 
@@ -598,14 +598,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="c1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn1" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="c2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn2" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn2" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -614,14 +614,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="c3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn3" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="c4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn4" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn4" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -630,14 +630,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="c5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn5" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn5" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">6.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="c6" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn6" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn6" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -646,14 +646,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="c7" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn7" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn7" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">8.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="c8" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn8" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn8" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -662,14 +662,14 @@ $error="";
 		        <input type="text" class="form-control" id="Roles" name="c9" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn9" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn9" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">10.</label>
 		      <div class="col-sm-3">
 		        <input type="text" class="form-control" id="Roles" name="c10" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="cn10" placeholder="">
+		        <input type="text" class="form-control" id="Number" maxlength="10" name="cn10" placeholder="">
 		      </div>
 		 </div>
 

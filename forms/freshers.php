@@ -5,34 +5,7 @@
 ?>
 
 <title>4zoHr - Freshers Registration Form</title>
-<style type="text/css">
 
-
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-.btn-file input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 100px;
-  text-align: right;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  background: red;
-  cursor: inherit;
-  display: block;
-}
-input[readonly] {
-  background-color: white !important;
-  cursor: text !important;
-}
-
-</style>
 <body>
 
 	
@@ -157,7 +130,7 @@ input[readonly] {
 	 	 <div class="form-row">
 		    <div class="form-group col-md-5">
 		      <label for="PassingYear" class="col-form-label">Passing Year</label>
-		       <input type="text" class="form-control" id="PassingYear" placeholder="Passing Year">
+		       <input type="text" class="form-control" maxlength="4" id="PassingYear" placeholder="Passing Year">
 		    </div>
 		    <div class="form-group col-md-5 ml-auto">
 		      <label for="Percentage" class="col-form-label">Percentage/CGPA</label>

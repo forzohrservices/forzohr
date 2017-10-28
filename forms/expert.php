@@ -184,7 +184,7 @@
 		      <label for="AboutCompany" class="col-sm-3 col-form-label my-4"><h5>Work Experience -</h5></label>
 		      <div class="col-sm-3">
 		         <label for="year" class="col-form-label">Years</label>
-		       	<input name="year" type="text" class="form-control" id="Year" placeholder="Year" maxlength="4">
+		       	<input name="year" type="text" class="form-control" id="Year" placeholder="Year" maxlength="2">
 		      </div>
 		      <div class="col-sm-3">
 		         <label for="months" class="col-form-label">Months</label>
@@ -198,7 +198,7 @@
 		 <div class="form-group row mt-4">
 		      <label for="AboutCompany" class="col-sm-3 col-form-label"><h5>Subcategory/Skills -</h5></label>
 		      <div class="col-sm-9">
-		       	<input type="text" class="form-control" id="Year" name="Skill" placeholder="Skill 1, Skill 2, Skill 3">
+		       	<input type="text" class="form-control" id="Skill" name="Skill" placeholder="Skill 1, Skill 2, Skill 3">
 		      </div>
 		 </div>
 		 <div class="form-group row mt-4">
@@ -240,14 +240,14 @@
 		        <input name="certificateName1" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="year1" placeholder="">
+		        <input type="text" maxlength="4" class="form-control" id="Number" name="year1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input name="certificateName2" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="year2" placeholder="">
+		        <input type="text" class="form-control" maxlength="4" id="Number" name="year2" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -256,14 +256,14 @@
 		        <input type="text" name="certificateName3" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="year3" placeholder="">
+		        <input type="text" class="form-control" maxlength="4" id="Number" name="year3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input name="certificateName4" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="year4" placeholder="">
+		        <input type="text" class="form-control" maxlength="4" id="Number" name="year4" placeholder="">
 		      </div>
 		 </div>
 
@@ -317,7 +317,7 @@
 		      </div>
 		      <div class="col-sm-2">
 		      	<label for="TotalCities" class="col-form-label">In Total Number</label>
-		        <input type="text" class="form-control" id="noExecutedPro" name="noExecutedPro" placeholder="Example - 15">
+		        <input type="text" class="form-control" maxlength="5" id="noExecutedPro" name="noExecutedPro" placeholder="Example - 15">
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
@@ -332,14 +332,14 @@
 		        <input name="e1" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="en1" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="en1" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input name="e2" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="en2" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="en2" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -348,14 +348,14 @@
 		        <input name="e3" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="en3" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="en3" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input name="e4" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="en4" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="en4" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		 </div>
 
@@ -365,7 +365,7 @@
 		      </div>
 		      <div class="col-sm-2">
 		      	<label for="TotalCities" class="col-form-label">In Total Number</label>
-		        <input type="text" class="form-control" id="noLiveProject" name="noLiveProject" placeholder="Example - 14">
+		        <input type="text" class="form-control" maxlength="5" id="noLiveProject" name="noLiveProject" placeholder="Example - 14">
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
@@ -380,14 +380,14 @@
 		        <input name="p1" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="pn1" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="pn1" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
 		        <input name="p2" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="pn2" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="pn2" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		 </div>
 		 <div class="form-group row">
@@ -396,14 +396,14 @@
 		        <input name="p3" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="pn3" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="pn3" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input name="p4" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input name="pn4" type="text" class="form-control" id="Number" placeholder="">
+		        <input name="pn4" type="text" class="form-control" maxlength="5" id="Number" placeholder="">
 		      </div>
 		 </div>
 
@@ -414,7 +414,7 @@
 		      </div>
 		      <div class="col-sm-2">
 		      	<label for="TotalCities" class="col-form-label">In Total Number</label>
-		        <input type="text" class="form-control" id="noTeam" name="noTeam" placeholder="Example - 10">
+		        <input type="text" class="form-control" id="noTeam" maxlength="5" name="noTeam" placeholder="Example - 10">
 		      </div>
 		  </div>
 		  <div class="form-group row mt-3">
@@ -429,7 +429,7 @@
 		        <input type="text" class="form-control" id="Roles" name="t1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="tn1" placeholder="">
+		        <input type="text" class="form-control" id="Number"  name="tn1" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">2.</label>
 		      <div class="col-sm-3">
@@ -445,14 +445,14 @@
 		        <input name="t3" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="tn3" placeholder="">
+		        <input type="text" class="form-control" id="Number"  name="tn3" placeholder="">
 		      </div>
 		      <label for="Roles" class="col-sm-1 col-form-label">4.</label>
 		      <div class="col-sm-3">
 		        <input name="t4" type="text" class="form-control" id="Roles" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="Number" name="tn4" placeholder="">
+		        <input type="text" class="form-control" id="Number"  name="tn4" placeholder="">
 		      </div>
 		 </div>
 

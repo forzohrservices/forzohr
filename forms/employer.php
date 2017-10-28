@@ -40,43 +40,50 @@
 	  	</div>
 	  </div>
 	  <div class="form-row">
+	  	<p class="h5 mr-2">Type : </p>
 	  	<div class="form-group">
-	  		<p class="h5 mr-2">Type : </p>
-		  	<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value="Start-Up">
+	  		<label class="custom-control custom-radio">
+			  <input id="radio1"type="radio" class="custom-control-input" name="type[]" value="Start-Up">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Start-Up</span>
 			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value="Small and Medium Enterprise (SME)">
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value="Small and Medium Enterprise (SME)">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Small and Medium Enterprise (SME)</span>
 			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value="Individual Employer">
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value="Individual Employer" >
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Individual Employer</span>
 			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value=">Corporate">
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value="Individual Employer">
+			  <span class="custom-control-indicator"></span>
+			  <span class="custom-control-description">Individual Employer</span>
+			</label>
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value=">Corporate">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Corporate</span>
 			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value="Agency / HR Firm">
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value="Agency / HR Firm">
 			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">Agency / HR Firm</span>
+			  <span class="custom-control-description"> Agency / HR Firm</span>
 			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value="Facility Management Service Agency">
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value="Facility Management Service Agency">
 			  <span class="custom-control-indicator"></span>
-			  <span class="custom-control-description">Facility Management Service Agency</span>
+			  <span class="custom-control-description"> Facility Management Service Agency</span>
 			</label>
-			<label class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" name="type[]" value="Consultancy">
+			<label class="custom-control custom-radio">
+			  <input id="radio2" type="radio" class="custom-control-input" name="type[]" value="Consultancy">
 			  <span class="custom-control-indicator"></span>
 			  <span class="custom-control-description">Consultancy</span>
 			</label>
+
+
 	  	</div>
 	  </div>
 	  <div class="form-row">
@@ -150,7 +157,7 @@
 		        <input type="text" class="form-control" id="inputEmail3" name="d1" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" name="dn1" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" maxlength="5" name="dn1" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
@@ -159,7 +166,7 @@
 		        <input type="text" class="form-control" id="inputEmail3" name="d2" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" name="dn2" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" maxlength="5" name="dn2" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
@@ -168,7 +175,7 @@
 		        <input type="text" class="form-control" id="inputEmail3" name="d3" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" name="dn3" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" maxlength="5" name="dn3" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
@@ -177,7 +184,7 @@
 		        <input type="text" class="form-control" id="inputEmail3" name="d4" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" name="dn4" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" maxlength="5" name="dn4" placeholder="">
 		      </div>
 		    </div>
 		    <div class="form-group row">
@@ -186,7 +193,7 @@
 		        <input type="text" class="form-control" id="inputEmail3" name="d5" placeholder="">
 		      </div>
 		      <div class="col-sm-2">
-		        <input type="text" class="form-control" id="inputEmail3" name="dn5" placeholder="">
+		        <input type="text" class="form-control" id="inputEmail3" maxlength="5" name="dn5" placeholder="">
 		      </div>
 		    </div>
 
