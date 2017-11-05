@@ -28,7 +28,7 @@
                         //echo "<span>Your File Uploaded Succesfully...!!</span><br/>";
                         //echo "<br/><b>File Name:</b> " . $_FILES["file"]["name"] . "<br>";
                         //echo "<b>Type:</b> " . $_FILES[$tagName]["type"] . "<br>";
-                        //echo "<b>Size:</b> " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+                        //echo "<b>Size:</b>  " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
                         //echo "<b>Temp file:</b> " . $_FILES[$tagName]["tmp_name"] . "<br>";
                         move_uploaded_file($_FILES[$tagName]["tmp_name"], "uploads/job-seekers/".$destination."/" .$mobile.$name.".".$file_extension);
                         $imgFullpath = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/'. "uploads/job-seekers/".$destination."/" .$mobile.$name.".".$file_extension;
@@ -58,7 +58,7 @@
 		$file_extension = end($temporary);
 		$docFullpath="";
 
-	    if ((($_FILES[$tagName]["type"] == "application/docx") || ($_FILES[$tagName]["type"] == "application/pdf") || ($_FILES[$tagName]["type"] == "application/doc") || ($_FILES[$tagName]["type"] == "application/rtf") 
+	    if ((($_FILES[$tagName]["type"] == "application/docx") || ($_FILES[$tagName]["type"] == "application/msword") || ($_FILES[$tagName]["type"] == "application/pdf") || ($_FILES[$tagName]["type"] == "application/doc") || ($_FILES[$tagName]["type"] == "application/rtf") 
 	    ) && ($_FILES[$tagName]["size"] < 2097152)//Approx. 2Mb files can be uploaded.
 	    && in_array($file_extension, $validextensions)) {
 
@@ -75,11 +75,11 @@
                     } 
                     else 
                     {   
-                        //echo "<span>Your File Uploaded Succesfully...!!</span><br/>";
-                        //echo "<br/><b>File Name:</b> " . $_FILES["file"]["name"] . "<br>";
-                        //echo "<b>Type:</b> " . $_FILES[$tagName]["type"] . "<br>";
-                        //echo "<b>Size:</b> " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-                        //echo "<b>Temp file:</b> " . $_FILES[$tagName]["tmp_name"] . "<br>";
+                        echo "<span>Your File Uploaded Succesfully...!!</span><br/>";
+                        echo "<br/><b>File Name:</b> " . $_FILES[$tagName]["name"] . "<br>";
+                        echo "<b>Type:</b> " . $_FILES[$tagName]["type"] . "<br>";
+                        echo "<b>Size:</b> " . ($_FILES[$tagName]["size"] / 1024) . " kB<br>";
+                        echo "<b>Temp file:</b> " . $_FILES[$tagName]["tmp_name"] . "<br>";
                         move_uploaded_file($_FILES[$tagName]["tmp_name"], "uploads/job-seekers/".$destination."/" .$mobile.$name.".".$file_extension);
                         $docFullpath = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/'. "uploads/job-seekers/".$destination."/" .$mobile.$name.".".$file_extension;
                         //echo "<b>Stored in:</b><a href = '$imgFullpath' target='_blank'> " .$imgFullpath.'<a>';
@@ -380,7 +380,7 @@
           if ($conn->multi_query($query) === TRUE) {
 
                 echo '
-                    <div class="container mt-3">
+                    <div class="container mt-5">
                         <div class="alert alert-success" role="alert">
                           Form Submitted successfully
                         </div>
@@ -388,7 +388,7 @@
                 ';             
             }else {
                 echo'
-                    <div class="container mt-3">
+                    <div class="container mt-5">
                         <div class="alert alert-danger" role="alert">
                           '.$error.' is mandatory
                         </div>

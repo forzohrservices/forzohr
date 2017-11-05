@@ -120,6 +120,7 @@
 		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
+			    <option value="ITI">ITI</option>
 			    <option value="Diploma">Diploma</option>
 			    <option value="Graduation">Graduation</option>
 			    <option value="Post Graduation">Post Graduation</option>
@@ -152,6 +153,7 @@
 		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
+			    <option value="ITI">ITI</option>
 			    <option value="Diploma">Diploma</option>
 			    <option value="Graduation">Graduation</option>
 			    <option value="Post Graduation">Post Graduation</option>
@@ -184,6 +186,7 @@
 		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
+			    <option value="ITI">ITI</option>
 			    <option value="Diploma">Diploma</option>
 			    <option value="Graduation">Graduation</option>
 			    <option value="Post Graduation">Post Graduation</option>
@@ -216,6 +219,7 @@
 		      	<option value="Less than 10th">Less than 10th</option>
 			    <option value="10th">10th</option>
 			    <option value="12th">12th</option>
+			    <option value="ITI">ITI</option>
 			    <option value="Diploma">Diploma</option>
 			    <option value="Graduation">Graduation</option>
 			    <option value="Post Graduation">Post Graduation</option>
@@ -649,7 +653,7 @@
 		      </div>
 		      <div class="col-sm-6">
 		      	<div class="input-group col-md-6">
-                <input type="file" accept="application/docx, application/doc, application/rtf, application/pdf" placeholder="doc, docx, rtf and pdf only"  name="cvUpload"/>
+                <input type="file" accept="application/docx, application/msword, application/doc, application/rtf" placeholder="doc, docx, rtf and pdf only"  name="cvUpload"/>
             </div>
 		      </div>
 		      
