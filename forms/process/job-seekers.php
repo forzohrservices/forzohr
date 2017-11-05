@@ -75,11 +75,11 @@
                     } 
                     else 
                     {   
-                        echo "<span>Your File Uploaded Succesfully...!!</span><br/>";
-                        echo "<br/><b>File Name:</b> " . $_FILES[$tagName]["name"] . "<br>";
-                        echo "<b>Type:</b> " . $_FILES[$tagName]["type"] . "<br>";
-                        echo "<b>Size:</b> " . ($_FILES[$tagName]["size"] / 1024) . " kB<br>";
-                        echo "<b>Temp file:</b> " . $_FILES[$tagName]["tmp_name"] . "<br>";
+                        //echo "<span>Your File Uploaded Succesfully...!!</span><br/>";
+                        //echo "<br/><b>File Name:</b> " . $_FILES[$tagName]["name"] . "<br>";
+                        //echo "<b>Type:</b> " . $_FILES[$tagName]["type"] . "<br>";
+                        //echo "<b>Size:</b> " . ($_FILES[$tagName]["size"] / 1024) . " kB<br>";
+                        //echo "<b>Temp file:</b> " . $_FILES[$tagName]["tmp_name"] . "<br>";
                         move_uploaded_file($_FILES[$tagName]["tmp_name"], "uploads/job-seekers/".$destination."/" .$mobile.$name.".".$file_extension);
                         $docFullpath = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'/'. "uploads/job-seekers/".$destination."/" .$mobile.$name.".".$file_extension;
                         //echo "<b>Stored in:</b><a href = '$imgFullpath' target='_blank'> " .$imgFullpath.'<a>';
